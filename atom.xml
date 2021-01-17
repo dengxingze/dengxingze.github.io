@@ -3,7 +3,23 @@
     <id>http://example.com</id>
     <title>DXZ</title>
     <link href="http://example.com" />
-    <updated>2021-01-08T13:46:11.333Z</updated>
+    <updated>2021-01-17T10:21:37.380Z</updated>
+    <entry>
+        <id>http://example.com/2021/01/17/%E2%80%9C%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%E2%80%9D/</id>
+        <title></title>
+        <link rel="alternate" href="http://example.com/2021/01/17/%E2%80%9C%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%E2%80%9D/"/>
+        <content type="html">&lt;hr&gt;
+&lt;p&gt;title: “面试总结”&lt;br&gt;
+date: 2021-01-17 18:21:37&lt;br&gt;
+tags:JRE： Java Runtime EnvironmentJDK：&lt;br&gt;
+Java Development Kit&lt;br&gt;
+JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。是使用 java 语言编写的程序运行所需要的软件环境，是提供给想运行 java 程序的用户使用的。&lt;br&gt;
+JDK 是 java 开发工具包，&lt;/p&gt;
+&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+&lt;p&gt;是程序员使用 java 语言编写 java 程序所需的开发工具包，是提供给程序员使用的。JDK 包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具：jconsole，jvisualvm 等工具软件，还包含了 java 程序编写所需的文档和 demo 例子程序。如果你需要运行 java 程序，只需安装 JRE 就可以了。如果你需要编写 java 程序，需要安装 JDK。&lt;/p&gt;
+</content>
+        <updated>2021-01-17T10:21:37.380Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2021/01/08/hello-world/</id>
         <title>Hello World</title>
