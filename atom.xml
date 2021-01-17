@@ -6,11 +6,9 @@
     <updated>2021-01-17T10:21:37.380Z</updated>
     <entry>
         <id>http://example.com/2021/01/17/Java%20interview%20summary/</id>
-        <title></title>
+        <title>Java interview summary</title>
         <link rel="alternate" href="http://example.com/2021/01/17/Java%20interview%20summary/"/>
-        <content type="html">&lt;p&gt;title: Java interview summary&lt;br&gt;
-date: 2021-01-17 18:21:37&lt;br&gt;
-JRE： Java Runtime Environment&lt;br&gt;
+        <content type="html">&lt;p&gt;JRE： Java Runtime Environment&lt;br&gt;
 JDK：Java Development Kit&lt;br&gt;
 JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。是使用 java 语言编写的程序运行所需要的软件环境，是提供给想运行 java 程序的用户使用的。&lt;br&gt;
 JDK 是 java 开发工具包，&lt;/p&gt;
