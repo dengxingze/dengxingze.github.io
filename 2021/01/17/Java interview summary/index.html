@@ -101,11 +101,11 @@ Dengxingze's blog = DXZ</title>
       <div id="imgs" class="pjax">
         <ul>
           <li class="item" data-background-image="http://pic2.bbzhi.com/qitabizhi/kuanpingxingkongdiqiu/kuanpingxingkongdiqiu_84574_9.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="http://pic2.bbzhi.com/qitabizhi/kuanpingxingkongdiqiu/kuanpingxingkongdiqiu_86378_9.jpg"></li>
-          <li class="item" data-background-image="http://pic3.bbzhi.com/xitongbizhi/huanxiangxingqiukuanpinggaoqingbi/computer_kuan_263545_9.jpg"></li>
+          <li class="item" data-background-image="http://pic3.bbzhi.com/xitongbizhi/huanxiangxingqiukuanpinggaoqingbi/computer_kuan_263631_9.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
+          <li class="item" data-background-image="http://pic5.bbzhi.com/chuangyibizhi/fengguangyeyaokudiannaozhuomiankuanpingbizhi/fengguangyeyaokudiannaozhuomiankuanpingbizhi_470253_9.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
         </ul>
       </div>
     </header>
@@ -155,31 +155,315 @@ JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。�
 JDK 是 java 开发工具包，</p>
 <a id="more"></a>
 <p>是程序员使用 java 语言编写 java 程序所需的开发工具包，是提供给程序员使用的。JDK 包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具：jconsole，jvisualvm 等工具软件，还包含了 java 程序编写所需的文档和 demo 例子程序。如果你需要运行 java 程序，只需安装 JRE 就可以了。如果你需要编写 java 程序，需要安装 JDK。</p>
-<p>SSM：Spring+SpringMVC+Mybatis<br>
- 一、Spring<br>
-1、Spring 在 ssm 中起什么作用？</p>
-<p>Spring：轻量级框架</p>
-<p>作用：Bean 工厂，用来管理 Bean 的生命周期和框架集成。</p>
-<p>两大核心：</p>
-<p>①. IOC/DI (控制反转 / 依赖注入) ：把 dao 依赖注入到 service 层，service 层反转给 action 层，Spring 顶层容器为 BeanFactory。</p>
-<p>②. AOP：面向切面编程</p>
-<p>2、Spring 的事务？</p>
-<p>编程式事务管理：编程方式管理事务，极大灵活性，难维护。</p>
-<p>声明式事务管理：可以将业务代码和事务管理分离，用注解和 xml 配置来管理事务。</p>
-<p>3、IOC 在项目中的作用？</p>
-<p>作用：Ioc 解决对象之间的依赖问题，把所有 Bean 的依赖关系通过配置文件或注解关联起来，降低了耦合度。</p>
-<p>4、Spring 的配置文件中的内容？</p>
-<p>开启事务注解驱动</p>
-<p>事务管理器</p>
-<p>开启注解功能，并配置扫描包</p>
-<p>配置数据库</p>
-<p>配置 SQL 会话工厂，别名，映射文件</p>
-<p>不用编写 Dao 层的实现类</p>
-<p>5、Spring 下的注解？</p>
-<p>注册：@Controller @Service @Component</p>
-<p>注入：@Autowired @Resource</p>
-<p>请求地址：@RequestMapping</p>
-<p>返回具体数据类型而非跳转：@ResponseBody</p>
+<p>形参和实参<br>
+形参：全称为 &quot;形式参数&quot; 是在定义函数名和函数体的时候使用的参数，目的是用来接收调用该函数时传如的参数.</p>
+<p>实参：全称为 &quot;实际参数&quot; 是在调用时传递个该函数的参数.</p>
+<p>java 四类八种基本数据类型<br>
+第一类：整型 byte short int long<br>
+ 第二类：浮点型 float double<br>
+ 第三类：逻辑型 boolean (它只有两个值可取 true false)<br>
+ 第四类：字符型 char<br>
+byte (位)                     占用 1 字节<br>
+ short (短整数)             占用 2 字节<br>
+ int (整数)                    占用 4 字节<br>
+ long (长整数)              占用 8 字节<br>
+ float (单精度)              占用 4 字节<br>
+ double (双精度)          占用 8 字节<br>
+ char (字符)                 占用 2 字节<br>
+ boolean (布尔值)        占用 1/8 字节</p>
+<p>7.java 创建对象的四种方式？<br>
+使用 new 创建对象、运用反射手段、调用对象的 clone () 方法、运用反序列化手段</p>
+<p>1. 面向对象的特征有哪些方面？<br>
+①　封装<br>
+最常见的是把属性私有化封装在一个类里面，只能通过方法去访问<br>
+②　继承<br>
+子类继承父类，从而继承了父类的方法和属性<br>
+③　抽象<br>
+比如一个英雄类，抽象出了 name,hp 这些属性，使得开发过程中更加易于理解<br>
+④　多态<br>
+多态分操作符的多态和类的多态。 类的多态指父类引用指向子类对象，并且有继承，有重写。</p>
+<p>6. 重载和重写的区别？<br>
+重载指的是在同一个类里面，方法名一样，但是参数不一样<br>
+重写指的是子类继承了父类的某个方法后，重新又写了一遍</p>
+<ol>
+<li>final 修饰类:<br>
+final 修饰类即表示此类已经是 “最后的、最终的” 含义。因此，用 final 修饰的类不能被继承，即不能拥有自己的子类。</li>
+</ol>
+<p>希尔排序：间隔为增量跳跃取数据</p>
+<p>队列（queue）是一种采用先进先出 (FIFO) 策略的抽象数据结构，它的想法来自于生活中排队的策略。顾客在付款结账的时候，按照到来的先后顺序排队结账，先来的顾客先结账，后来的顾客后结账。</p>
+<p>栈是一种操作受限的线性表只允许从一端插入和删除数据。栈有两种存储方式，即线性存储和链接存储（链表）。栈的一个最重要的特征就是栈的插入和删除只能在栈顶进行，所以每次删除的元素都是最后进栈的元素，故栈也被称为后进先出（LIFO）表。每个栈都有一个栈顶指针，它初始值为 - 1，且总是指向最后一个入栈的元素，栈有两种处理方式，即进栈（push）和出栈（pop），因为在进栈只需要移动一个变量存储空间，所以它的时间复杂度为 O (1)，但是对于出栈分两种情况，栈未满时，时间复杂度也为 O (1)，但是当栈满时，需要重新分配内存，并移动栈内所有数据，所以此时的时间复杂度为 O (n)。以下举例栈结构的两种实现方式，线性存储和链接存储。</p>
+<p>多继承即一个子类可以有多个父类，它继承了多个父类的特性。<br>
+多继承可以看作是单继承的扩展。所谓多继承是指派生类具有多个基类，派生类与每个基类之间的关系仍可看作是一个单继承。<br>
+多态允许将子类类型的指针赋值给父类类型的指针。</p>
+<p>什么是虚函数？什么是纯虚函数？<br>
+ 虚函数是指一个类中你希望重载的成员函数，当你用一个基类指针或引用指向一个继承类对象的时候，你调用一个虚函数，实际调用的是继承类的版本。<br>
+有纯虚函数的类是抽象类，不能生成对象，只能派生。他派生的类的纯虚函数没有被改写，那么，它的派生类还是个抽象类。<br>
+定义纯虚函数就是为了让基类不可实例化化，<br>
+ 因为实例化这样的抽象数据结构本身并没有意义.</p>
+<p>一。二叉树的常用性质<br>
+ 1. 常用性质<br>
+ &lt;1&gt;. 在二叉树的第 i 层上最多有 2^(i-1) 个节点 。（i&gt;=1）<br>
+&lt;2&gt;. 二叉树中如果深度为 k (有 k 层), 那么最多有 2^k-1 个节点。(k&gt;=1）<br>
+&lt;3&gt;. 若二叉树按照从上到下从左到右依次编号，则若某节点编号为 k，则其左右子树根节点编号分别为 2k 和 2k+1;<br>
+&lt;4&gt;. 二叉树分类：满二叉树，完全二叉树<br>
+满二叉树：高度为 h，由 2^h-1 个节点构成的二叉树称为满二叉树。<br>
+先序遍历：按照根节点 -&gt; 左子树 -&gt; 右子树的顺序访问二叉树<br>
+先序遍历：（1）访问根节点；（2）采用先序递归遍历左子树；（3）采用先序递归遍历右子树；<br>
+中序遍历：按照左子树 -&gt; 根节点 -&gt; 右子树的顺序访问<br>
+中序遍历：（1）采用中序遍历左子树；（2）访问根节点；（3）采用中序遍历右子树<br>
+后序遍历：按照左子树 -&gt; 右子树–&gt; 根节点的顺序访问<br>
+后序遍历：（1）采用后序递归遍历左子树；（2）采用后序递归遍历右子树；（3）访问根节点；</p>
+<p>希尔排序：间隔为增量跳跃取数据</p>
+<p>序列化和反序列化的定义：<br>
+(1) Java 序列化就是指把 Java 对象转换为字节序列的过程<br>
+ Java 反序列化就是指把字节序列恢复为 Java 对象的过程。<br>
+(2) 序列化最重要的作用：在传递和保存对象时。保证对象的完整性和可传递性。对象转换为有序字节流，以便在网络上传输或者保存在本地文件中。<br>
+反序列化的最重要的作用：根据字节流中保存的对象状态及描述信息，通过反序列化重建对象。<br>
+总结：核心作用就是对象状态的保存和重建。（整个过程核心点就是字节流中所保存的对象状态及描述信息）</p>
+<p>OSI 七层模型<br>
+物理层<br>
+在 OSI 参考模型中，物理层（Physical Layer）是参考模型的最低层，也是 OSI 模型的第一层。<br>
+物理层的主要功能是：利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。<br>
+数据链路层<br>
+数据链路层（Data Link Layer）是 OSI 模型的第二层，负责建立和管理节点间的链路。该层的主要功能是：通过各种控制协议，将有差错的物理信道变为无差错的、能可靠传输数据帧的数据链路。<br>
+网络层<br>
+网络层（Network Layer）是 OSI 模型的第三层，它是 OSI 参考模型中最复杂的一层，也是通信子网的最高一层。它在下两层的基础上向资源子网提供服务。其主要任务是：通过路由选择算法，为报文或分组通过通信子网选择最适当的路径。该层控制数据链路层与传输层之间的信息转发，建立、维持和终止网络的连接。<br>
+传输层<br>
+ OSI 下 3 层的主要任务是数据通信，上 3 层的任务是数据处理。而传输层（Transport Layer）是 OSI 模型的第 4 层。因此该层是通信子网和资源子网的接口和桥梁，起到承上启下的作用。<br>
+该层的主要任务是：向用户提供可靠的端到端的差错和流量控制，保证报文的正确传输。<br>
+会话层<br>
+会话层（Session Layer）是 OSI 模型的第 5 层，是用户应用程序和网络之间的接口，主要任务是：向两个实体的表示层提供建立和使用连接的方法。<br>
+表示层<br>
+表示层（Presentation Layer）是 OSI 模型的第六层，它对来自应用层的命令和数据进行解释，对各种语法赋予相应的含义，并按照一定的格式传送给会话层。其主要功能是 “处理用户信息的表示问题，如编码、数据格式转换和加密解密” 等。<br>
+应用层<br>
+应用层（Application Layer）是 OSI 参考模型的最高层，它是计算机用户，以及各种应用程序和网络之间的接口，其功能是直接向用户提供服务，完成用户希望在网络上完成的各种工作。<br>
+OSI7 层模型的小结<br>
+在 7 层模型中，每一层都提供一个特殊的网络功能。从网络功能的角度观察：下面 4 层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第 4 层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上 3 层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下 4 层主要完成通信子网的功能，上 3 层主要完成资源子网的功能。</p>
+<p>以下是 TCP/IP 分层模型<br>
+第一层：网络接口层<br>
+　　包括用于协作 IP 数据在已有网络介质上传输的协议。实际上 TCP/IP 标准并不定义与 ISO 数据链路层和物理层相对应的功能。相反，它定义像地址解析协议 (Address Resolution Protocol,ARP) 这样的协议，提供 TCP/IP 协议的数据结构和实际物理硬件之间的接口。<br>
+　　第二层：网间层<br>
+　　对应于 OSI 七层参考模型的网络层。本层包含 IP 协议、RIP 协议 (Routing Information Protocol，路由信息协议)，负责数据的包装、寻址和路由。同时还包含网间控制报文协议 (Internet Control Message Protocol,ICMP) 用来提供网络诊断信息。<br>
+　　第三层：传输层<br>
+　　对应于 OSI 七层参考模型的传输层，它提供两种端到端的通信服务。其中 TCP 协议 (Transmission Control Protocol) 提供可靠的数据流运输服务，UDP 协议 (Use Datagram Protocol) 提供不可靠的用户数据报服务。<br>
+　　第四层：应用层<br>
+　　对应于 OSI 七层参考模型的应用层和表达层。因特网的应用层协议包括 Finger、Whois、FTP (文件传输协议)、Gopher、HTTP (超文本传输协议)、Telent (远程终端协议)、SMTP (简单邮件传送协议)、IRC (因特网中继会话)、NNTP（网络新闻传输协议）等，这也是本书将要讨论的重点。</p>
+<p>10.ArrayList 和 LinkedList 的区别<br>
+ ArrayList 是数组结构，所以定位很快，但是插入和删除很慢<br>
+ LinkedList 是双向链表结构，所以插入和删除很快，但是定位很慢</p>
+<p>11.equals 和 == 的区别？<br>
+== 是判断两个变量或实例是不是指向同一个内存空间，equals 是判断两个变量或实例所指向的内存空间的值是不是相同<br>
+ == 是指对内存地址进行比较 ， equals () 是对字符串的内容进行比较<br>
+ == 指引用是否相同， equals () 指的是值是否相同</p>
+<p>12.try {} 里有一个 return 语句，那么紧跟在这个 try 后的 finally {} 里的 code 会不会被执行，什么时候被执行，在 return 前还是后？<br>
+try 里的 return 和 finally 里的 return 都会执行，但是当前方法只会采纳 finally 中 return 的值。无论 try、catch 块中执行怎样的代码，出现怎样的情况，异常处理的 finally 块总会被执行。</p>
+<p>13.for 循环中的 return break continue 的区别？<br>
+执行 return 后，不仅结束了该循环，当前函数也结束了，后面的语句不再执行；break 会终止并跳出它所在的循环；continue 是跳出本次循环，进入下一次循环的入口处 执行下一次循环</p>
+<p>14.Error 和 Exception 有什么区别？<br>
+Error 和 Exception 都实现了 Throwable 接口<br>
+ Error 指的是 JVM 层面的错误，比如内存不足 OutOfMemoryError<br>
+Exception 指的是代码逻辑的异常，比如下标越界 OutOfIndexException</p>
+<p>16. 你所知道的集合类都有哪些？主要方法？<br>
+常见的集合：ArrayList,LinkedList,HashSet,HashMap,TreeSet 等等<br>
+常见方法：size ()、add ()、remove ()<br>
+ String 常用的方法：length ()、valueOf ()、split ()、substring ()</p>
+<p>17. 多线程有几种实现方法，都是什么？<br>
+ 通常来讲，Java 创建一个线程有三种方式<br>
+①　继承一个 Thread 类<br>
+②　实现 Runnable 接口<br>
+③　匿名内部类</p>
+<p>List, Set, Map 的区别？<br>
+list 是最常用的 它其实就是一种可以自由改变长度的数组<br>
+ set 和 list 基本的用法差不多 区别在于 set 里不能放相同的元素<br>
+至于 map 这个和上边 2 个在用法上有很大差别 map 里储存的是键值对 可以根据键来值搜索值 键是唯一的 值可以重复… 学 Servlet 和 jsp 的时候 会有大量的 map 的应用</p>
+<p>18.&amp; 和 &amp;&amp; 的区别？<br>
+&amp; 有两个作用，分别是 位与 和 逻辑与<br>
+ &amp;&amp; 就是逻辑与<br>
+作为逻辑与， &amp; 和 &amp;&amp; 分别表示长路与和短路与<br>
+长路与 两侧，都会被运算<br>
+短路与 只要第一个是 false，第二个就不进行运算了</p>
+<p>20. 给我五个你最常见到的 runtime exception。<br>
+NullPointerException 空指针异常<br>
+ ArithmeticException 算术异常，比如除数为零<br>
+ ClassCastException 类型转换异常<br>
+ ConcurrentModificationException 同步修改异常，遍历一个集合的时候，删除集合的元素，就会抛出该异常<br>
+ IndexOutOfBoundsException 数组下标越界异常<br>
+ NegativeArraySizeException 为数组分配的空间是负数异常</p>
+<p>21.servlet 的生命周期？<br>
+一个 Servlet 的生命周期由 实例化，初始化，提供服务，销毁，被回收 几个步骤组成</p>
+<p>SSM：Spring+SpringMVC+Mybatis</p>
+<p>一、Spring<br>
+1、Spring 在 ssm 中起什么作用？<br>
+Spring：轻量级框架<br>
+作用：Bean 工厂，用来管理 Bean 的生命周期和框架集成。<br>
+两大核心：<br>
+①. IOC/DI (控制反转 / 依赖注入) ：把 dao 依赖注入到 service 层，service 层反转给 action 层，Spring 顶层容器为 BeanFactory。<br>
+②. AOP：面向切面编程</p>
+<p>2、Spring 的事务？<br>
+编程式事务管理：编程方式管理事务，极大灵活性，难维护。<br>
+声明式事务管理：可以将业务代码和事务管理分离，用注解和 xml 配置来管理事务。</p>
+<p>3、IOC 在项目中的作用？<br>
+作用：Ioc 解决对象之间的依赖问题，把所有 Bean 的依赖关系通过配置文件或注解关联起来，降低了耦合度。</p>
+<p>4、Spring 的配置文件中的内容？<br>
+开启事务注解驱动<br>
+事务管理器<br>
+开启注解功能，并配置扫描包<br>
+配置数据库<br>
+配置 SQL 会话工厂，别名，映射文件<br>
+不用编写 Dao 层的实现类</p>
+<p>5、Spring 下的注解？<br>
+注册：@Controller @Service @Component<br>
+ 注入：@Autowired @Resource<br>
+ 请求地址：@RequestMapping<br>
+ 返回具体数据类型而非跳转：@ResponseBody</p>
+<p>6、Spring DI 的三种方式？<br>
+ 构造器注入：通过构造方法初始化<br>
+<constructor-arg index="0" type="java.lang.String" value="宝马"></constructor-arg><br>
+setter 方法注入：通过 setter 方法初始化<br>
+<property name="id" value="1111"></property><br>
+接口注入</p>
+<p>7、Spring 主要使用了什么模式？<br>
+工厂模式：每个 Bean 的创建通过方法<br>
+单例模式：默认的每个 Bean 的作用域都是单例<br>
+代理模式：关于 Aop 的实现通过代理模式</p>
+<p>8、IOC，AOP 的实现原理？<br>
+IOC：通过反射机制生成对象注入<br>
+ AOP：动态代理</p>
+<p>3. 什么是 IOC？<br>
+IOC： Inversion of control 反转控制。 比如以前创建一个对象，需要自己主动 new 一个对象，通过 IOC，对象的创建交由 Spring 框架 创建，开发人员直接使用已经创建好的对象。</p>
+<p>4. 什么是 DI？<br>
+DI： Dependency Injection 依赖注入。 通过 IOC 创建对象的时候，可以注入字符串甚至其他对象。 比如 DAO 就会注入 session factory.<br>
+ 通常 IOC 和 DI 是紧密结合，一起使用的</p>
+<p>5. 什么是 AOP？<br>
+AOP: 面向切面编程。<br>
+把功能划分为核心业务功能和其他的周边辅助功能，比如日志，性能统计，事务等等。 其他的周边辅助功能可以都看作切面功能。核心功能和切面功能分别独立开发，通过面向切面编程，可以有机的把核心业务功能和切面功能根据需求结合在一起。 比如增加操作可以和事务切面结合在一起，查询操作可以和性能统计切面结合在一起。<br>
+在配置方面，要配置切面，切点，并且通过 aspect:config 把切面和切点结合起来</p>
+<p>二、SpringMvc<br>
+1、SpringMvc 的控制器是不是单例模式，如果是，有什么问题，怎么解决？<br>
+问题：单例模式，在多线程访问时有线程安全问题<br>
+解决方法：不要用同步，在控制器里面不能写字段</p>
+<p>2、SpringMvc 中控制器的注解？<br>
+@Controller：该注解表明该类扮演控制器的角色</p>
+<p>3、@RequestMapping 注解用在类上的作用？<br>
+作用：用来映射一个 URL 到一个类或者一个特定的处理方法上</p>
+<p>4、前台多个参数，这些参数都是一个对象，快速得到对象？<br>
+方法：直接在方法中声明这个对象，SpringMvc 就自动把属性赋值到这个对象里面</p>
+<p>5、SpringMvc 中函数的返回值？<br>
+String，ModelAndView，List，Set 等<br>
+一般 String，Ajax 请求，返回一个 List 集合</p>
+<p>6、SpringMvc 中的转发和重定向？<br>
+ 转发： return：“hello”<br>
+ 重定向 ：return：“redirect:hello.jsp”<br>
+ 通过 JackSon 框架把 java 里面对象直接转换成 js 可识别的 json 对象，具体步骤如下：<br>
+加入 JackSon.jar<br>
+ 在配置文件中配置 json 的映射<br>
+在接受 Ajax 方法里面直接返回 Object，list 等，方法前面需要加上注解 @ResponseBody</p>
+<p>8、SpringMvc 的工作流程<br>
+浏览器→发送请求→前端控制器（DispatcherServlet）→请求→处理器映射器 (HandlerMapping)→返回处理器执行链→前端控制器（DispatcherServlet）→发送处理器执行链→处理器适配器 (HandlerAdatper)→执行→处理器 (Handler)→ModelAndView→处理器适配器 (HandlerAdatper)→modelandview→前端控制器（DispatcherServlet）→modelandview→视图解析器→view→前端控制器（DispatcherServlet）→model→视图 (view)→前端控制器（DispatcherServlet）→响应→浏览器</p>
+<p>9、Struts2 和 SpringMvc 的区别？<br>
+ 入口不同：<br>
+Struts2：filter 过滤器<br>
+ SpringMvc：一个 Servlet 即前端控制器</p>
+<p>开发方式不同：<br>
+Struts2：基于类开发，传递参数通过类的属性，只能设置为多例<br>
+ SpringMvc：基于方法开发 (一个 url 对应一个方法)，请求参数传递到方法形参，可以为单例也可以为多例 (建议单例)</p>
+<p>请求方式不同：<br>
+Struts2：值栈村塾请求和响应的数据，通过 OGNL 存取数据<br>
+ SpringMvc：通过参数解析器将 request 请求内容解析，给方法形参赋值，将数据和视图封装成 ModelAndView 对象，最后又将 ModelAndView 中的模型数据通过 request 域传输到页面，jsp 视图解析器默认使用的是 jstl。</p>
+<p>三、Mybatis<br>
+1、Ibatis 和 Mybatis？<br>
+Ibatis：2010 年，apache 的 Ibatis 框架停止更新，并移交给了 google 团队，同时更名为 MyBatis。从 2010 年后 Ibatis 在没更新过，彻底变成了一个孤儿框架。一个没人维护的框架注定被 mybatis 拍在沙滩上。<br>
+Mybatis：Ibatis 的升级版本。</p>
+<p>2、什么是 Mybatis 的接口绑定，有什么好处？<br>
+Mybatis 实现了 DAO 接口与 xml 映射文件的绑定，自动为我们生成接口的具体实现，使用起来变得更加省事和方便。</p>
+<p>3、什么情况用注解，什么情况用 xml 绑定？<br>
+注解使用情况：Sql 语句简单时<br>
+ xml 绑定使用情况：xml 绑定 (@RequestMap 用来绑定 xml 文件)</p>
+<p>4、Mybatis 在核心处理类叫什么？<br>
+SqlSession</p>
+<p>5、查询表名和返回实体 Bean 对象不一致，如何处理？<br>
+映射键值对即可<br>
+<result column="title" property="title" javaType="java.lang.String"/><br>
+column：数据库中表的列名<br>
+ property：实体 Bean 中的属性名</p>
+<p>6、Mybatis 的好处？<br>
+把 Sql 语句从 Java 中独立出来。<br>
+封装了底层的 JDBC，API 的调用，并且能够将结果集自动转换成 JavaBean 对象，简化了 Java 数据库编程的重复工作。<br>
+自己编写 Sql 语句，更加的灵活。<br>
+入参无需用对象封装（或者 map 封装）, 使用 @Param 注解</p>
+<p>7、Mybatis 配置一对多？<br>
+<collection property="topicComment" column="id" ofType="com.tmf.bbs.pojo.Comment" select="selectComment" /><br>
+property：属性名<br>
+ column：共同列<br>
+ ofType：集合中元素的类型<br>
+ select：要连接的查询</p>
+<p>8、Mybatis 配置一对一？<br>
+<association property="topicType" select="selectType" column="topics_type_id" javaType="com.tmf.bbs.pojo.Type"/><br>
+property：属性名<br>
+ select：要连接的查询<br>
+ column：共同列<br>
+ javaType：集合中元素的类型</p>
+<p>9 、{} 和 #{}的区别？
+{}： 简 单 字 符 串 替 换 ， 把 {}：简单字符串替换，把：简单字符串替换，把 {} 直接替换成变量的值，不做任何转换，这种是取值以后再去编译 SQL 语句。<br>
+#{}：预编译处理，sql 中的 #{} 替换成？，补全预编译语句，有效的防止 Sql 语句注入，这种取值是编译好 SQL 语句再取值。<br>
+总结：一般用 #{} 来进行列的代替</p>
+<p>10、获取上一次自动生成的主键值？<br>
+select last _insert_id()</p>
+<p>11、Mybatis 如何分页，分页原理？<br>
+RowBounds 对象分页<br>
+在 Sql 内直接书写，带有物理分页</p>
+<p>12、Mybatis 工作原理？<br>
+通过 SqlSessionFactoryBuilder 从 mybatis-config.xml 配置文件中构建出 SqlSessionFactory。<br>
+SqlSessionFactory 开启一个 SqlSession，通过 SqlSession 实例获得 Mapper 对象并且运行 Mapper 映射的 Sql 语句。<br>
+完成数据库的 CRUD 操作和事务提交，关闭 SqlSession。</p>
+<p>操作系统之进程的状态和转换详解 (七态)<br>
+ 三态模型</p>
+<ol>
+<li>运行态 (running): 占有处理器正在运行</li>
+<li>就绪态 (ready): 具备运行条件，等待系统分配处理器以便运行</li>
+<li>等待态 (blocked): 不具备运行条件，正在等待某个事件的完成<br>
+运行态 —→等待态：等待使用资源；如等待外设传输；等待人工干预。<br>
+等待态 —→就绪态：资源得到满足；如外设传输结束；人工干预完成。<br>
+运行态 —→就绪态：运行时间片到；出现有更高优先权进程。<br>
+就绪态 —→运行态：CPU 空闲时选择一个就绪进程。</li>
+</ol>
+<p>五态模型<br>
+建态（new）和终止态（exit ）<br>
+NULL—→新建态：执行一个程序，创建一个子进程。<br>
+新建态 —→就绪态：当操作系统完成了进程创建的必要操作，并且当前系统的性能和虚拟内存的容量均允许。<br>
+运行态 —→终止态：当一个进程到达了自然结束点，或是出现了无法克服的错误，或是被操作系统所终结，或是被其他有终止权的进程所终结。<br>
+终止态 —→NULL：完成善后操作。<br>
+就绪态 —→终止态：未在状态转换图中显示，但某些操作系统允许父进程终结子进程。<br>
+等待态 —→终止态：未在状态转换图中显示，但某些操作系统允许父进程终结子进程。</p>
+<p>七态模型<br>
+挂起就绪态（ready,suspend）<br>
+挂起就绪态表明了进程具备运行条件但目前在二级存储器中，只有当它被对换到主存才能被调度执行<br>
+挂起等待态（blocked,suspend）挂起等待态则表明了进程正在等待某一个事件且在二级存储器中。<br>
+等待态 —→挂起等待态：如果当前不存在就绪进程，那么至少有一个等待态进程将被对换出去成为挂起等待态；操作系统根据当前资源状况和性能要求，可以决定把等待态进程对换出去成为挂起等待态。<br>
+挂起等待态 —→挂起就绪态：引起进程等待的事件发生之后，相应的挂起等待态进程将转换为挂起就绪态。<br>
+挂起就绪态 —→就绪态：当内存中没有就绪态进程，或者挂起就绪态进程具有比就绪态进程更高的优先级，系统将把挂起就绪态进程转换成就绪态。<br>
+就绪态 —→挂起就绪态：操作系统根据当前资源状况和性能要求，也可以决定把就绪态进程对换出去成为挂起就绪态。<br>
+挂起等待态 —→等待态：当一个进程等待一个事件时，原则上不需要把它调入内存。但是在下面一种情况下，这一状态变化是可能的。当一个进程退出后，主存已经有了一大块自由空间，而某个挂起等待态进程具有较高的优先级并且操作系统已经得知导致它阻塞的事件即将结束，此时便发生了这一状态变化。<br>
+运行态 —→挂起就绪态：当一个具有较高优先级的挂起等待态进程的等待事件结束后，它需要抢占 CPU，，而此时主存空间不够，从而可能导致正在运行的进程转化为挂起就绪态。另外处于运行态的进程也可以自己挂起自己。<br>
+新建态 —→挂起就绪态：考虑到系统当前资源状况和性能要求，可以决定新建的进程将被对换出去成为挂起就绪态。</p>
+<p>进程的挂起<br>
+到目前为止，我们或多或少总是假设所有的进程都在内存中。事实上，可能出现这样一些情况，例如由于进程的不断创建，系统的资源已经不能满足进程运行的要求，这个时候就必须把某些进程挂起（suspend），对换到磁盘镜像区中，暂时不参与进程调度，起到平滑系统操作负荷的目的。<br>
+引起进程挂起的原因是多样的，主要有：</p>
+<ol>
+<li>系统中的进程均处于等待状态，处理器空闲，此时需要把一些阻塞进程对换出去，以腾出足够的内存装入就绪进程运行。</li>
+<li>进程竞争资源，导致系统资源不足，负荷过重，此时需要挂起部分进程以调整系统负荷，保证系统的实时性或让系统正常运行。</li>
+<li>把一些定期执行的进程（如审计程序、监控程序、记账程序）对换出去，以减轻系统负荷。</li>
+<li>用户要求挂起自己的进程，以便根据中间执行情况和中间结果进行某些调试、检查和改正。</li>
+<li>父进程要求挂起自己的后代进程，以进行某些检查和改正。</li>
+<li>操作系统需要挂起某些进程，检查运行中资源使用情况，以改善系统性能；或当系统出现故障或某些功能受到破坏时，需要挂起某些进程以排除故障。</li>
+</ol>
+<p>一个挂起进程具有如下特征：</p>
+<ol>
+<li>该进程不能立即被执行。</li>
+<li>挂起进程可能会等待一个事件，但所等待的事件是独立于挂起条件的，事件结束并不能导致进程具备执行条件。</li>
+<li>进程进入挂起状态是由于操作系统、父进程或进程本身阻止它的运行。</li>
+<li>结束进程挂起状态的命令只能通过操作系统或父进程发出。</li>
+</ol>
 
   </div>
 
@@ -191,7 +475,7 @@ JDK 是 java 开发工具包，</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-01-21 14:06:19" itemprop="dateModified" datetime="2021-01-21T14:06:19+08:00">2021-01-21</time>
+    <time title="Modified: 2021-01-21 16:11:54" itemprop="dateModified" datetime="2021-01-21T16:11:54+08:00">2021-01-21</time>
   </span>
 </div>
 
@@ -241,7 +525,7 @@ JDK 是 java 开发工具包，</p>
     <div class="item left">
       
 
-  <a href="/2021/01/08/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhnx9glj20zk0m8npd.jpg" title="Hello World">
+  <a href="/2021/01/08/hello-world/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;pic1.bbzhi.com&#x2F;chahuabizhi&#x2F;weilaikeji-diannaocgshejibizhi&#x2F;cartoon_future_tech_background_5300_9.jpg" title="Hello World">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Hello World</h3>
@@ -251,7 +535,7 @@ JDK 是 java 开发工具包，</p>
     <div class="item right">
       
 
-  <a href="/2021/01/20/SQL%20interview%20summary%20/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="SQL interview summary">
+  <a href="/2021/01/20/SQL%20interview%20summary%20/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;pic3.bbzhi.com&#x2F;xitongbizhi&#x2F;yuzhouxingkongkuanpingbizhi&#x2F;computer_kuan_264596_9.jpg" title="SQL interview summary">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>SQL interview summary</h3>
