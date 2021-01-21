@@ -5,8 +5,437 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Thu, 21 Jan 2021 17:30:38 +0800</pubDate>
-        <lastBuildDate>Thu, 21 Jan 2021 17:30:38 +0800</lastBuildDate>
+        <pubDate>Thu, 21 Jan 2021 21:06:14 +0800</pubDate>
+        <lastBuildDate>Thu, 21 Jan 2021 21:06:14 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/01/21/HTML+CSS+JS%20interview%20summary/</guid>
+            <title>Hello World</title>
+            <link>http://example.com/2021/01/21/HTML+CSS+JS%20interview%20summary/</link>
+            <pubDate>Thu, 21 Jan 2021 21:06:14 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcWlpbGVlL3AvNjkxNzk0Mi5odG1s&#34;&gt;https://www.cnblogs.com/qiilee/p/6917942.html&lt;/span&gt;&lt;br&gt;
+1、 你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么？&lt;br&gt;
+IE: trident 内核&lt;/p&gt;
+&lt;p&gt;Firefox：gecko 内核&lt;/p&gt;
+&lt;p&gt;Safari:webkit 内核&lt;/p&gt;
+&lt;p&gt;Opera: 以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核&lt;/p&gt;
+&lt;p&gt;Chrome:Blink (基于 webkit，Google 与 Opera Software 共同开发)&lt;/p&gt;
+&lt;p&gt;2、你能描述一下渐进增强和优雅降级之间的不同吗？&lt;br&gt;
+ 渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。&lt;/p&gt;
+&lt;p&gt;优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。&lt;/p&gt;
+&lt;p&gt;3、请描述一下 cookies，sessionStorage 和 localStorage 的区别？&lt;/p&gt;
+&lt;p&gt;sessionStorage 用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此 sessionStorage 不是一种持久化的本地存储，仅仅是会话级别的存储。而 localStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。&lt;/p&gt;
+&lt;p&gt;web storage 和 cookie 的区别&lt;/p&gt;
+&lt;p&gt;Web Storage 的概念和 cookie 相似，区别是它是为了更大容量存储设计的。Cookie 的大小是受限的，并且每次你请求一个新的页面的时候 Cookie 都会被发送过去，这样无形中浪费了带宽，另外 cookie 还需要指定作用域，不可以跨域调用。&lt;/p&gt;
+&lt;p&gt;除此之外，Web Storage 拥有 setItem,getItem,removeItem,clear 等方法，不像 cookie 需要前端开发者自己封装 setCookie，getCookie。但是 Cookie 也是不可以或缺的：Cookie 的作用是与服务器进行交互，作为 HTTP 规范的一部分而存在 ，而 Web Storage 仅仅是为了在本地 “存储” 数据而生。&lt;/p&gt;
+&lt;p&gt;4、一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。&lt;/p&gt;
+&lt;p&gt;图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。&lt;/p&gt;
+&lt;p&gt;如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。&lt;/p&gt;
+&lt;p&gt;如果图片为 css 图片，可以使用 CSSsprite，SVGsprite，Iconfont、Base64 等技术。&lt;/p&gt;
+&lt;p&gt;如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。&lt;/p&gt;
+&lt;p&gt;如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。&lt;/p&gt;
+&lt;p&gt;5、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？&lt;/p&gt;
+&lt;p&gt;针对不同的浏览器写不同的 CSS code 的过程，就是 CSS hack。&lt;/p&gt;
+&lt;p&gt;#test{&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;width:300px;  
+
+height:300px;  
+
+      /*firefox*/
+
+background-color:red\9;      /*all ie*/
+
+    /*ie8*/
+
++background-color:pink;        /*ie7*/
+
+_       /*ie6*/    &amp;#125; 
+
+:root #test &amp;#123; background-color:purple\9; &amp;#125;  /*ie9*/
+
+@media all and (min-width:0px)&amp;#123; #test &amp;#123;&amp;#125; &amp;#125;  /*opera*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0)&amp;#123; #test &amp;#123;background-color:gray;&amp;#125; &amp;#125;       /*chrome and safari*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;6、Sass、LESS 是什么？大家为什么要使用他们？&lt;/p&gt;
+&lt;p&gt;他们是 CSS 预处理器。他是 CSS 上的一种抽象层。他们是一种特殊的语法 / 语言编译成 CSS。&lt;/p&gt;
+&lt;p&gt;例如 Less 是一种动态样式语言。将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。&lt;/p&gt;
+&lt;p&gt;为什么要使用它们？&lt;/p&gt;
+&lt;p&gt;结构清晰，便于扩展。&lt;/p&gt;
+&lt;p&gt;可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。&lt;/p&gt;
+&lt;p&gt;可以轻松实现多重继承。&lt;/p&gt;
+&lt;p&gt;完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。&lt;/p&gt;
+&lt;p&gt;7、html 常见兼容性问题？&lt;/p&gt;
+&lt;p&gt;1. 双边距 BUG float 引起的  使用 display&lt;/p&gt;
+&lt;p&gt;2.3 像素问题 使用 float 引起的 使用 dislpay:inline -3px&lt;/p&gt;
+&lt;p&gt;3. 超链接 hover 点击后失效  使用正确的书写顺序 link visited hover active&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzQuSWU=&#34;&gt;4.Ie&lt;/span&gt; z-index 问题 给父级添加 position:relative&lt;/p&gt;
+&lt;p&gt;5.Png 透明 使用 js 代码 改&lt;/p&gt;
+&lt;p&gt;6.Min-height 最小高度 ！Important 解决’&lt;/p&gt;
+&lt;p&gt;7.select 在 ie6 下遮盖 使用 iframe 嵌套&lt;/p&gt;
+&lt;p&gt;8. 为什么没有办法定义 1px 左右的宽度容器（IE6 默认的行高造成的，使用 over:hidden,zoom:0.08 line-height:1px）&lt;/p&gt;
+&lt;p&gt;9.IE5-8 不支持 opacity，解决办法：&lt;/p&gt;
+&lt;p&gt;.opacity {&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opacity: 0.4
+
+filter: alpha(opacity=60); /* for IE5-7 */
+
+-ms-filter: &amp;quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&amp;quot;; /* for IE 8*/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;IE6 不支持 PNG 透明背景，解决办法: IE6 下使用 gif 图片&lt;br&gt;
+ 8、描述一个”reset” 的 CSS 文件并如何使用它。知道 normalize.css 吗？你了解他们的不同    之处？&lt;/p&gt;
+&lt;p&gt;因为浏览器的品种很多，每个浏览器的默认样式也是不同的，比如&lt;button&gt;标签，在 IE 浏览器、Firefox 浏览器以及 Safari 浏览器中的样式都是不同的，所以，通过重置 button 标签的 CSS 属性，然后再将它统一定义，就可以产生相同的显示效果。&lt;/p&gt;
+&lt;p&gt;你可能会用 Normalize 来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。&lt;/p&gt;
+&lt;p&gt;9、一边宽度固定，另一边自适应？&lt;/p&gt;
+&lt;p&gt;1）第一种：float 单一层浮动法&lt;/p&gt;
+&lt;p&gt;例如：左侧固定成 100px; 则核心代码 左侧：width:100px;float:left;&lt;/p&gt;
+&lt;p&gt;右侧 width:auto;margin-left:100px;&lt;/p&gt;
+&lt;p&gt;2）第二种：定位 ，在固定元素上加入绝对定位，自适应元素设置成 margin-left: 固定元素的宽度&lt;/p&gt;
+&lt;p&gt;3）通过 BFC 规则实现&lt;/p&gt;
+&lt;p float:left;width:200px;height:200px;=&#34;&#34;&gt;例如：.left&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;     .right&amp;#123;width:100%;overflow:hidden;height:200px&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;10、什么是圣杯布局？&lt;/p&gt;
+&lt;p&gt;左右两边的内容保持不变，中间的内容可以根据屏幕的大小的改变而改变。&lt;/p&gt;
+&lt;p&gt;1 .content {&lt;/p&gt;
+&lt;p&gt;2 padding: 0 200px;&lt;/p&gt;
+&lt;p&gt;3 height: 200px;&lt;/p&gt;
+&lt;p&gt;4 min-width: 200px;&lt;/p&gt;
+&lt;p&gt;5 }&lt;/p&gt;
+&lt;p&gt;.left {&lt;/p&gt;
+&lt;p&gt;6 width: 200px;&lt;/p&gt;
+&lt;p&gt;7 height: 200px;&lt;/p&gt;
+&lt;p&gt;8 background: red;&lt;/p&gt;
+&lt;p&gt;9 float: left;&lt;/p&gt;
+&lt;p&gt;10 margin-left: -200px;&lt;/p&gt;
+&lt;p&gt;11 }&lt;/p&gt;
+&lt;p&gt;12 .right {&lt;/p&gt;
+&lt;p&gt;13 width: 200px;&lt;/p&gt;
+&lt;p&gt;14 height: 200px;&lt;/p&gt;
+&lt;p&gt;15 background: yellow;&lt;/p&gt;
+&lt;p&gt;16 float: right;&lt;/p&gt;
+&lt;p&gt;17 margin-right: -200px;&lt;/p&gt;
+&lt;p&gt;18 }&lt;/p&gt;
+&lt;p&gt;19 .center {&lt;/p&gt;
+&lt;p&gt;20 width: 100%;&lt;/p&gt;
+&lt;p&gt;21 min-width: 200px;&lt;/p&gt;
+&lt;p&gt;22 height: 200px;&lt;/p&gt;
+&lt;p&gt;23 background: green;&lt;/p&gt;
+&lt;p&gt;24 float: left;&lt;/p&gt;
+&lt;p&gt;25 }&lt;/p&gt;
+&lt;p&gt;26 &lt;/style&gt;&lt;/p&gt;
+&lt;p&gt;27 &lt;/head&gt;&lt;/p&gt;
+&lt;p&gt;28 &lt;body&gt;&lt;/p&gt;
+&lt;p&gt;29 &lt;div class=&#34;content&#34;&gt;&lt;/p&gt;
+&lt;p&gt;30 &lt;div class=&#34;left&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;31 &lt;div class=&#34;center&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;32 &lt;div class=&#34;right&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;33 &lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;11、div 中子元素居中的三种方式？&lt;/p&gt;
+&lt;p&gt;首先 div 设置为相对定位 relative, 子元素设置为绝对定位 absolute&lt;/p&gt;
+&lt;p position:absolute;left:0;top:0;bottom:0;right:0;margin:auto=&#34;&#34;&gt;第一种 #div.img&lt;/p&gt;
+&lt;p&gt;第二种&lt;/p&gt;
+&lt;p position:absoulute;left:50%;top:50%;margin-left:img的12width；margin-top:-img的12height;=&#34;&#34;&gt;#div.img&lt;/p&gt;
+&lt;p&gt;HTML5+CSS3&lt;/p&gt;
+&lt;p&gt;1、html5 有哪些新特性、移除了那些元素？如何处理 HTML5 新标签的浏览器兼容问题？&lt;/p&gt;
+&lt;p&gt;新特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;拖拽释放 (Drag and drop) API&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语义化更好的内容标签（header,nav,footer,aside,article,section）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;音频、视频 API (audio,video)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;画布 (Canvas) API&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;地理 (Geolocation) API&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sessionStorage 的数据在浏览器关闭后自动删除&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表单控件，calendar、date、time、email、url、search&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新的技术 webworker, websocket, Geolocation&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;移除的元素：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;纯表现的元素：basefont，big，center，font, s，strike，tt，u；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对可用性产生负面影响的元素：frame，frameset，noframes；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;HTML5 兼容性解决方案&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;IE8/IE7/IE6 支持通过 document.createElement 方法产生的标签，可以利用这一特性让这些浏览器支持 HTML5 新标签，浏览器支持新标签后，还需要添加标签默认的样式（当然最好的方式是直接使用成熟的框架、使用最多的是 html5shim 框架）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!--[if lt IE 9]&gt;
+
+&lt;script&gt; src=&#34;http://html5shim.googlecode.com/svn/trunk/html5.js&#34;&lt;/script&gt;
+
+&lt;![endif]--&gt;
+&lt;p&gt;2 你如何对网站的文件和资源进行优化？&lt;/p&gt;
+&lt;p&gt;文件合并&lt;/p&gt;
+&lt;p&gt;文件最小化 / 文件压缩&lt;/p&gt;
+&lt;p&gt;使用 CDN 托管&lt;/p&gt;
+&lt;p&gt;缓存的使用&lt;/p&gt;
+&lt;p&gt;3 CSS3 新增伪类有那些？&lt;/p&gt;
+&lt;p&gt;p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p:last-of-type  选择属于其父元素的最后 &amp;lt;p&amp;gt; 元素的每个 &amp;lt;p&amp;gt; 元素。
+
+p:only-of-type  选择属于其父元素唯一的 &amp;lt;p&amp;gt; 元素的每个 &amp;lt;p&amp;gt; 元素。
+
+p:only-child    选择属于其父元素的唯一子元素的每个 &amp;lt;p&amp;gt; 元素。
+
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &amp;lt;p&amp;gt; 元素。
+
+:enabled、:disabled 控制表单控件的禁用状态。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:checked，单选框或复选框被选中。&lt;/p&gt;
+&lt;p&gt;4 H5+CSS3 兼容性解决的方案&lt;/p&gt;
+&lt;p&gt;1 htmlshiv.js 框架 HTML5shiv 通过 JavaScript 来创建 HTML5 元素 (如 main, header, footer 等)&lt;/p&gt;
+&lt;!--[if lt IE 9]&gt;
+
+&lt;script&gt; src=&#34;http://html5shim.googlecode.com/svn/trunk/html5.js&#34;&lt;/script&gt;
+
+&lt;![endif]--&gt;
+&lt;p&gt;2 selectivizr.js&lt;/p&gt;
+&lt;p&gt;selectivizr 是一个 JavaScript 工具，使 IE 浏览器也可以支持 CSS3 伪类以及属性选择器&lt;/p&gt;
+&lt;p&gt;使用很简单，只要把 js include 到页面上，然后你就可以&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;[JS library]&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&amp;lt;!- -[if (gte IE 6)&amp;amp;(lte IE 8)]&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;selectivizr.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+  &amp;lt;noscript&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;[fallback css]&amp;quot; /&amp;gt;&amp;lt;/noscript&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;lt;![endif]- -&amp;gt;&lt;/p&gt;
+&lt;p&gt;3 条件注释&lt;/p&gt;
+&lt;p&gt;5 CSS3 有哪些新特性？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;CSS3 实现圆角（border-radius），阴影（box-shadow），&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3.transform:rotate (9deg) scale (0.85,0.90) translate (0px,-30px) skew (-9deg,0deg);// 旋转，缩放，定位，倾斜&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;增加了更多的 CSS 选择器  多背景 rgba&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 CSS3 中唯一引入的伪元素是 ::selection.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;媒体查询，多栏布局&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;border-image&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;JS+JQuery 部分内容&lt;/p&gt;
+&lt;p&gt;1 数组和字符串中常用的方法&lt;/p&gt;
+&lt;p&gt;1）数组中常用的方法&lt;/p&gt;
+&lt;p&gt;Push () 向数组的末尾增加一项  unshift () 向数组开头增加一项&lt;/p&gt;
+&lt;p&gt;pop () 删除数组的末尾项       shift () 删除数组开头项&lt;/p&gt;
+&lt;p&gt;Splice () 删除数组中的任意项  concat 拼接&lt;/p&gt;
+&lt;p&gt;Join () 把数组中的每一项 按照指定的分隔符拼接成字符串&lt;/p&gt;
+&lt;p&gt;reverse: 倒序数组 返回值倒序数组 原有数组改变&lt;br&gt;
+ sort: 根据匿名函数进行冒泡排序 b-a 倒序 a-b 升序&lt;/p&gt;
+&lt;p&gt;兼容性不好：&lt;br&gt;
+indexOf: 返回获取项在数组中的索引&lt;br&gt;
+ lastIndexOf: 返回获取项在数组中出现的最后一次索引&lt;br&gt;
+ forEach: 循环遍历数组 参数是一个匿名函数 默认返回为 undefined&lt;br&gt;
+map：循环遍历数组 参数是一个匿名函数&lt;/p&gt;
+&lt;p&gt;2）字符串中常用的方法&lt;/p&gt;
+&lt;p&gt;substring 方法返回位于 String 对象中指定位置的子字符串。&lt;/p&gt;
+&lt;p&gt;substr 方法返回一个从指定位置开始的指定长度的子字符串。&lt;/p&gt;
+&lt;p&gt;slice 方法返回字符串的片段。&lt;/p&gt;
+&lt;p&gt;split 将一个字符串分割为子字符串，然后将结果作为字符串数组返回。&lt;/p&gt;
+&lt;p&gt;2 js 兼容性问题&lt;/p&gt;
+&lt;p&gt;1 获取，设置标签的内容 iE 和 chrome 浏览器支持 innerText  火狐浏览器支持 textContent&lt;/p&gt;
+&lt;p&gt;2 获取指定元素的第一个元素和最后一个元素  element.firstElementChild&lt;/p&gt;
+&lt;p&gt;IE679 只能获取 firstChild 获取第一个字节点，然后通过判断的节点的类型区的第一个子元素&lt;/p&gt;
+&lt;p&gt;3event.x 与 event.y，在 IE 中，event 对象有 x,y 属性，现代浏览器中中，与 event.x 等效的是 event.pageX ，但 event.pageX IE 中没有&lt;/p&gt;
+&lt;p&gt;4 问题说明：IE 下，可以使用获取常规属性的方法来获取自定义属性，也可以使用 getAttribute () 获取自定义属性；Firefox 下，只能使用 getAttribute () 获取自定义属性。&lt;/p&gt;
+&lt;p&gt;解决方法：统一通过 getAttribute () 获取自定义属性。&lt;/p&gt;
+&lt;p&gt;3 说说你对闭包的理解&lt;/p&gt;
+&lt;p&gt;可以把闭包简单理解成 “定义在一个函数内部的函数”&lt;/p&gt;
+&lt;p&gt;闭包有三个特性：&lt;/p&gt;
+&lt;p&gt;1. 函数嵌套函数&lt;/p&gt;
+&lt;p&gt;2. 函数内部可以引用外部的参数和变量&lt;/p&gt;
+&lt;p&gt;3. 参数和变量不会被垃圾回收机制回收&lt;/p&gt;
+&lt;p&gt;由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题&lt;/p&gt;
+&lt;p&gt;4、javascript 里面的继承怎么实现，如何避免原型链上面的对象共享&lt;/p&gt;
+&lt;p&gt;用构造函数和原型链的混合模式去实现继承，避免对象共享可以参考经典的 extend () 函数，很多前端框架都有封装的，就是用一个空函数当做中间变量&lt;/p&gt;
+&lt;p&gt;5、JavaScript 原型，原型链？有什么特点？&lt;/p&gt;
+&lt;p&gt;原型对象也是普通的对象，是对象一个自带隐式的 &lt;strong&gt;proto&lt;/strong&gt; 属性，原型也有可能有自己的原型，如果一个原型对象的原型不为 null 的话，我们就称之为原型链。*&lt;/p&gt;
+&lt;p&gt;原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。&lt;/p&gt;
+&lt;p&gt;6 请说出三种减少页面加载时间的方法。&lt;/p&gt;
+&lt;p&gt;1. 优化图片&lt;/p&gt;
+&lt;p&gt;2. 图像格式的选择（GIF：提供的颜色较少，可用在一些对颜色要求不高的地方）&lt;/p&gt;
+&lt;p&gt;3. 优化 CSS（压缩合并 css，如 margin-top,margin-left…)&lt;/p&gt;
+&lt;p&gt;4. 网址后加斜杠（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS13d3ctZW84ZS5jYW1wci5jb20vJUU3JTlCJUFFJUU1JUJEJTk1JUVGJUJDJThDJUU0JUJDJTlBJUU1JTg4JUE0JUU2JTk2JUFEJUU4JUJGJTk5JUU0JUI4JUFBJUUyJTgwJTlDJUU3JTlCJUFFJUU1JUJEJTk1JUU2JTk4JUFGJUU0JUJCJTgwJUU0JUI5JTg4JUU2JTk2JTg3JUU0JUJCJUI2JUU3JUIxJUJCJUU1JTlFJThCJUVGJUJDJThDJUU2JTg4JTk2JUU4JTgwJTg1JUU2JTk4JUFGJUU3JTlCJUFFJUU1JUJEJTk1JUUzJTgwJTgyJUVGJUJDJTg5&#34;&gt;如 www.campr.com/ 目录，会判断这个 “目录是什么文件类型，或者是目录。）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;5. 标明高度和宽度（如果浏览器没有找到这两个参数，它需要一边下载图片一边计算大小，如果图片很多，浏览器需要不断地调整页面。这不但影响速度，也影响浏览体验。&lt;/p&gt;
+&lt;p&gt;当浏览器知道了高度和宽度参数后，即使图片暂时无法显示，页面上也会腾出图片的空位，然后继续加载后面的内容。从而加载时间快了，浏览体验也更好了。）&lt;/p&gt;
+&lt;p&gt;6. 减少 http 请求（合并文件，合并图片）&lt;/p&gt;
+&lt;p&gt;7. 你有哪些性能优化的方法？&lt;/p&gt;
+&lt;p&gt;（1） 减少 http 请求次数：CSS Sprites, JS、CSS 源码压缩、图片大小控制合适；网页 Gzip，CDN 托管，data 缓存 ，图片服务器。&lt;/p&gt;
+&lt;p&gt;（2） 前端模板 JS + 数据，减少由于 HTML 标签导致的带宽浪费，前端用变量保存 AJAX 请求结果，每次操作本地变量，不用请求，减少请求次数&lt;/p&gt;
+&lt;p&gt;（3） 用 innerHTML 代替 DOM 操作，减少 DOM 操作次数，优化 javascript 性能。&lt;/p&gt;
+&lt;p&gt;（4） 当需要设置的样式很多时设置 className 而不是直接操作 style。&lt;/p&gt;
+&lt;p&gt;（5） 少用全局变量、缓存 DOM 节点查找的结果。减少 IO 读取操作。&lt;/p&gt;
+&lt;p&gt;（6） 避免使用 CSS Expression（css 表达式) 又称 Dynamic properties (动态属性)。&lt;/p&gt;
+&lt;p&gt;图片预加载，将样式表放在顶部，将脚本放在底部？加上时间戳。&lt;/p&gt;
+&lt;p&gt;8、 平时如何管理你的项目？&lt;/p&gt;
+&lt;p&gt;1) 先期团队必须确定好全局样式（globe.css），编码模式 (utf-8) 等；&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3) 标注样式编写人，各模块都及时标注（标注关键样式调用的地方）&lt;/p&gt;
+&lt;p&gt;4) 页面进行标注（例如 页面 模块 开始和结束）&lt;/p&gt;
+&lt;p&gt;5) CSS 跟 HTML 分文件夹并行存放，命名都得统一（例如 style.css）；&lt;/p&gt;
+&lt;p&gt;6) JS 分文件夹存放 命名以该 JS 功能为准的英文翻译。&lt;/p&gt;
+&lt;p&gt;9、call 和 apply 的区别&lt;/p&gt;
+&lt;p&gt;call 和 apply 相同点：改变函数中 this 的指向&lt;/p&gt;
+&lt;p&gt;不同点：函数参数的传递形式&lt;/p&gt;
+&lt;p&gt;call 将函数参数依次传入&lt;/p&gt;
+&lt;p&gt;apply 将函数参数用一个数组的形式传入&lt;/p&gt;
+&lt;p&gt;10、原生 JS 的 window.onload 与 Jquery 的&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mtext&gt;，&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(document).ready(function() {})，&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;，&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;(function () {}) 有什么不同？&lt;/p&gt;
+&lt;p&gt;1) 执行时间&lt;/p&gt;
+&lt;p&gt;window.onload 必须等到页面内包括图片的所有元素加载完毕后才能执行。 $(document).ready () 是 DOM 结构绘制完毕后就执行，不必等到加载完毕。&lt;/p&gt;
+&lt;p&gt;2) 编写个数不同&lt;/p&gt;
+&lt;p&gt;window.onload 不能同时编写多个，如果有多个 window.onload 方法，只会执行一个 $(document).ready () 可以同时编写多个，并且都可以得到执行&lt;/p&gt;
+&lt;p&gt;3) 简化写法 window.onload 没有简化写法 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mrow&gt;&lt;/mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mtext&gt;可以简写成&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;(document).ready(function(){})可以简写成&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;可&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;以&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;简&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;写&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;成&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; (function (){})；&lt;/p&gt;
+&lt;p&gt;11、split (),join () 的区别？&lt;/p&gt;
+&lt;p&gt;split () 方法通过把字符串分割成子字符串来把一个 String 对象分割成一个字符串数组。&lt;/p&gt;
+&lt;p&gt;join () 方法将数组中的所有元素连接成一个字符串。&lt;/p&gt;
+&lt;p&gt;12、谈一下 Jquery 中的 bind (),live (),delegate (),on () 的区别？&lt;/p&gt;
+&lt;p&gt;bind： 绑定事件，对新添加的事件不起作用，方法用于将一个处理程序附加到每个匹配元素的事件上并返回 jQuery 对象。&lt;/p&gt;
+&lt;p&gt;live： 方法将一个事件处理程序附加到与当前选择器匹配的所有元素（包含现有的或将来添加的）的指定事件上并返回 jQuery 对象。&lt;/p&gt;
+&lt;p&gt;delegate： 方法基于一组特定的根元素将处理程序附加到匹配选择器的所有元素（现有的或将来的）的一个或多个事件上。&lt;/p&gt;
+&lt;p&gt;On: 支持直接在目标元素上绑定事件，也支持在目标元素的祖辈元素上委托绑定。在事件委托绑定模式下，即使是执行 on () 函数之后新添加的元素，只要它符合条件，绑定的事件处理函数也对其有效。&lt;/p&gt;
+&lt;p&gt;Ajax 的面试题&lt;/p&gt;
+&lt;p&gt;1、解释 jsonp 的原理&lt;/p&gt;
+&lt;p&gt;动态创建 script 标签，回调函数&lt;/p&gt;
+&lt;p&gt;2、请尽可能详尽的解释 ajax 的工作原理&lt;/p&gt;
+&lt;p&gt;思路：先解释异步，再解释 ajax 如何使用&lt;/p&gt;
+&lt;p&gt;Ajax 的原理简单来说通过 XmlHttpRequest 对象来向服务器发异步请求，从服务器获得数据，然后用 javascript 来操作 DOM 而更新页面。这其中最关键的一步就是从服务器获得请求数据。要清楚这个过程和原理，我们必须对 XMLHttpRequest 有所了解。&lt;/p&gt;
+&lt;p&gt;XMLHttpRequest 是 ajax 的核心机制，它是在 IE5 中首先引入的，是一种支持异步请求的技术。简单的说，也就是 javascript 可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果。&lt;/p&gt;
+&lt;p&gt;3、Ajax 的最大的特点是什么。&lt;/p&gt;
+&lt;p&gt;Ajax 可以实现动态不刷新（局部刷新）&lt;/p&gt;
+&lt;p&gt;readyState 属性 状态 有 5 个可取值： 0 = 未初始化 ，1 = 启动 2 = 发送，3 = 接收，4 = 完成&lt;/p&gt;
+&lt;p&gt;4、ajax 的缺点&lt;/p&gt;
+&lt;p&gt;1） ajax 不支持浏览器 back 按钮。&lt;/p&gt;
+&lt;p&gt;2) 安全问题 AJAX 暴露了与服务器交互的细节。&lt;/p&gt;
+&lt;p&gt;3) 对搜索引擎的支持比较弱。&lt;/p&gt;
+&lt;p&gt;4) 破坏了程序的异常机制。&lt;/p&gt;
+&lt;p&gt;5) 不容易调试。&lt;/p&gt;
+&lt;p&gt;5、get 和 post 的区别？&lt;/p&gt;
+&lt;p&gt;GET：一般用于信息获取，使用 URL 传递参数，对所发送信息的数量也有限制，一般在 2000 个字符；&lt;/p&gt;
+&lt;p&gt;POST：一般用于修改服务器上的资源，对所发送的信息没有限制。&lt;/p&gt;
+&lt;p&gt;也就是说 Get 是通过地址栏来传值，而 Post 是通过提交表单来传值。&lt;/p&gt;
+&lt;p&gt;6、如何解决跨域问题？&lt;br&gt;
+ 理解跨域的概念：协议、域名、端口都相同才同域，否则都是跨域&lt;/p&gt;
+&lt;p&gt;1.Get 方式请求的跨域可以通过 jsonp 来解决。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy50dWljb29sLmNvbS9hcnRpY2xlcy9RQmJ1aWFS&#34;&gt;http://www.tuicool.com/articles/QBbuiaR&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2.Post 方式的请求  cors 解决跨域&lt;/p&gt;
+&lt;p&gt;Cors 解释&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jbmJsb2dzLmNvbS9EYXJyZW5fY29kZS9wL2NvcnMuaHRtbA==&#34;&gt;http://www.cnblogs.com/Darren_code/p/cors.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;JSONP 实现跨域&lt;/p&gt;
+&lt;p&gt;常用的 jquery 实现跨域调用&lt;/p&gt;
+&lt;p&gt;$.ajax({&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;url: &amp;quot;http://127.0.0.1/~chenjiebin/mycode/php/crossdomain/index.php&amp;quot;,
+
+dataType: &amp;quot;jsonp&amp;quot;,
+
+jsonp: &amp;quot;callback&amp;quot;,
+
+context: document.body,
+
+success: function(data) &amp;#123;
+
+    console.log(data);
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;});&lt;/p&gt;
+&lt;p&gt;这个调用实际上的实现原理是&lt;/p&gt;
+&lt;p&gt;在网页中构造一个 script 标签，将 src 设置为对应的 url，并增加上相应的 callback 参数，形如如下格式：&lt;/p&gt;
+&lt;script src=&#34;http://127.0.0.1/~chenjiebin/mycode/php/crossdomain/index.php?callback=jQuery211018970995225637144_1465350372062&amp;_=1465350372063&#34;&gt;&lt;/script&gt;
+&lt;p&gt;请求的服务端代码如下：&lt;/p&gt;
+&lt;p&gt;$data     = json_encode(array(“id” =&amp;gt; “1”, “name” =&amp;gt; “tom”));&lt;/p&gt;
+&lt;p&gt;$callback = $_GET[“callback”];&lt;/p&gt;
+&lt;p&gt;echo $callback . “(” . $data . “)”;&lt;/p&gt;
+&lt;p&gt;实际上最后返回的内容就是一段 js 代码：&lt;/p&gt;
+&lt;p&gt;jQuery211018970995225637144_1465350372062({“id”:“1”,“name”:“tom”})&lt;/p&gt;
+&lt;p&gt;当浏览器获取到该段 js 代码后就会执行这个函数，从而实现回调 ajax 请求时设置的 success 方法。&lt;/p&gt;
+&lt;p&gt;jsonp 实现的缺点&lt;/p&gt;
+&lt;p&gt;了解了原理后，就知道 jsonp 实现的跨域方式不支持 post 请求，只能支持 get 请求。但是如果需要支持 post 请求该怎么办呢？下面谈下服务器端设置的方式。&lt;/p&gt;
+&lt;p&gt;服务端设置支持跨域&lt;/p&gt;
+&lt;p&gt;主要是 Access-Control-Allow-Origin 头参数，该参数用来指定允许哪个来源的域请求。服务端代码如下：&lt;/p&gt;
+&lt;p&gt;// 表示支持所有来源的域进行请求&lt;/p&gt;
+&lt;p&gt;// 实际在操作过程中可以设置为指定域&lt;/p&gt;
+&lt;p&gt;header(‘Access-Control-Allow-Origin:*’);&lt;/p&gt;
+&lt;p&gt;$data = json_encode(array(“id” =&amp;gt; “1”, “name” =&amp;gt; “tom”));&lt;/p&gt;
+&lt;p&gt;echo $data;&lt;/p&gt;
+&lt;p&gt;对应的 js 代码：&lt;/p&gt;
+&lt;p&gt;$.ajax({&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type: &amp;quot;POST&amp;quot;,
+
+url: &amp;quot;http://127.0.0.1/~chenjiebin/mycode/php/crossdomain/header.php&amp;quot;,
+
+dataType: &amp;quot;json&amp;quot;,
+
+success: function(data) &amp;#123;
+
+    console.log(data);
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;});&lt;/p&gt;
+&lt;p&gt;可以支持 post 请求&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;                   移动web开发
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;1、px，em，rem 的区别？&lt;/p&gt;
+&lt;p&gt;1）px 像素（Pixel） 。绝对单位。像素 px 是相对于显示器屏幕分辨率而言的，是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果 px 要换算成物理长度，需要指定精度 DPI。&lt;/p&gt;
+&lt;p&gt;2）em 是相对长度单位，相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。它会继承父级元素的字体大小，因此并不是一个固定的值。&lt;/p&gt;
+&lt;p&gt;3）rem 是 CSS3 新增的一个相对单位（rootem，根 em） ，使用 rem 为元素设定字体大小时，仍然是相对大小，&lt;/p&gt;
+&lt;p&gt;但相对的只是 HTML 根元素。&lt;/p&gt;
+&lt;p&gt;2、jQuery 和 Zepto 的区别？各自的使用场景？Zepto 比 jQuery 轻量的原因？&lt;/p&gt;
+&lt;p&gt;jQuery 主要用于 PC 端开发，Zepto 比 jQuery 更加小巧，主要用于移动端，Zepto 是不兼容低版本的浏览器&lt;/p&gt;
+&lt;p&gt;原因：&lt;/p&gt;
+&lt;p&gt;1）Zepto 轻量的原因是没有像 jQuery 一样处理移动端的兼容性问题，&lt;/p&gt;
+&lt;p&gt;2）Zepto 的模块是放到不同的模块中，根据业务需要引入模块，减少代码量，提高网页的加载速度&lt;/p&gt;
+&lt;p&gt;3、bootstrap 框架中的栅格系统的本质是什么？以及 bootstrap 框架的优缺点？&lt;/p&gt;
+&lt;p&gt;bootstrap 的栅格系统的本质是通过 css3 的媒体查询实现的&lt;/p&gt;
+&lt;p&gt;优点:bootstrap 框架便于快速布局，而且添加了更加灵活的栅格系统，增加了响应式&lt;/p&gt;
+&lt;p&gt;计，来适配不同的设备&lt;/p&gt;
+&lt;p&gt;缺点：对 ie678 的兼容性可能不太好，而且 bootstrap 是依赖于 jQuery，代码的体积大，会影响网页的加载速度，不适合移动端。&lt;/p&gt;
+&lt;p&gt;4、如何解决移动端的 click 事件的延迟响应？&lt;/p&gt;
+&lt;p&gt;移动端 click 屏幕产生 200-300 ms 的延迟响应，往往会造成按钮点击延迟甚至是点击失效。&lt;/p&gt;
+&lt;p&gt;解决方案&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;github 上有一个叫做 fastclick 的库，它也能规避移动设备上 click 事件的延迟响应，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Z0bGFicy9mYXN0Y2xpY2s=&#34;&gt;https://github.com/ftlabs/fastclick&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2) zepto 的 touch 模块，tap 事件也是为了解决在 click 的延迟问题&lt;/p&gt;
+&lt;p&gt;5、什么是 mvc 开发模式？&lt;/p&gt;
+&lt;p&gt;Mvc 是一中组织代码结构的方式，便于代码的管理和维护。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2021/01/21/Linux%20interview%20summary/</guid>
             <title>Linux interview summary</title>
