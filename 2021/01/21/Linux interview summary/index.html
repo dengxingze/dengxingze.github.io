@@ -1,0 +1,712 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="DXZ" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="DXZ" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="DXZ" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2021/01/21/Linux%20interview%20summary/">
+
+
+
+  <title>
+Linux interview summary |
+Dengxingze's blog = DXZ</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Linux interview summary
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-01-21 17:30:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-01-21T17:30:38+08:00">2021-01-21</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Dengxingze's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="http://pic2.bbzhi.com/qitabizhi/kuanpingxingkongdiqiu/kuanpingxingkongdiqiu_86378_9.jpg"></li>
+          <li class="item" data-background-image="http://pic3.bbzhi.com/xitongbizhi/yuzhouxingkongkuanpingbizhi/computer_kuan_264596_9.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="http://pic3.bbzhi.com/shejibizhi/jingmeidiannaoshejiyishufengguang/design_jingmeisheji_500576_9.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/21/Linux%20interview%20summary/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="dengxingze">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DXZ">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="常用指令"><a class="markdownIt-Anchor" href="#常用指令">#</a> 常用指令</h2>
+<p>ls　　        显示文件或目录<br>
+ - l           列出文件详细信息 l (list)<br>
+-a          列出当前目录下所有文件及目录，包括隐藏的 a (all)<br>
+ mkdir         创建目录<br>
+ - p           创建目录，若无父目录，则创建 p (parent)<br>
+ cd               切换目录<br>
+ touch          创建空文件<br>
+ echo            创建带有内容的文件。<br>
+cat              查看文件内容<br>
+ cp                拷贝<br>
+ mv               移动或重命名<br>
+ rm               删除文件<br>
+ - r            递归删除，可删除子目录及文件<br>
+ - f            强制删除<br>
+ find              在文件系统中搜索某文件<br>
+ wc                统计文本中行数、字数、字符数<br>
+ grep             在文本文件中查找某个字符串<br>
+ rmdir           删除空目录<br>
+ tree             树形结构显示目录，需要安装 tree 包<br>
+ pwd              显示当前目录<br>
+ ln                  创建链接文件<br>
+ more、less  分页显示文本文件内容<br>
+ head、tail    显示文件头、尾内容<br>
+ ctrl+alt+F1  命令行全屏模式</p>
+<h2 id="系统管理命令"><a class="markdownIt-Anchor" href="#系统管理命令">#</a> 系统管理命令</h2>
+<p>stat              显示指定文件的详细信息，比 ls 更详细<br>
+ who               显示在线登陆用户<br>
+ whoami          显示当前操作用户<br>
+ hostname      显示主机名<br>
+ uname           显示系统信息<br>
+ top                动态显示当前耗费资源最多进程信息<br>
+ ps                  显示瞬间进程状态 ps -aux<br>
+du                  查看目录大小 du -h /home 带有单位显示目录信息<br>
+ df                  查看磁盘大小 df -h 带有单位显示磁盘信息<br>
+ ifconfig          查看网络情况<br>
+ ping                测试网络连通<br>
+ netstat          显示网络状态信息<br>
+ man                命令不会用了，找男人  如：man ls<br>
+clear              清屏<br>
+ alias               对命令重命名 如：alias showmeit=“ps -aux” ，另外解除使用 unaliax showmeit<br>
+kill                 杀死进程，可以先用 ps 或 top 命令查看进程的 id，然后再用 kill 命令杀死进程。</p>
+<h2 id="打包压缩相关命令"><a class="markdownIt-Anchor" href="#打包压缩相关命令">#</a> 打包压缩相关命令</h2>
+<p>gzip：<br>
+bzip2：<br>
+tar:                打包压缩<br>
+ - c              归档文件<br>
+ - x              压缩文件<br>
+ - z              gzip 压缩文件<br>
+ - j              bzip2 压缩文件<br>
+ - v              显示压缩或解压缩过程 v (view)<br>
+-f              使用档名<br>
+例：<br>
+tar -cvf /home/abc.tar/home/abc              只打包，不压缩<br>
+ tar -zcvf /home/abc.tar.gz/home/abc        打包，并用 gzip 压缩<br>
+ tar -jcvf /home/abc.tar.bz2 /home/abc      打包，并用 bzip2 压缩<br>
+当然，如果想解压缩，就直接替换上面的命令  tar -cvf  /tar -zcvf  /tar -jcvf 中的 “c” 换成 “x” 就可以了。</p>
+<h2 id="关机重启机器"><a class="markdownIt-Anchor" href="#关机重启机器">#</a> 关机 / 重启机器</h2>
+<p>shutdown<br>
+-r             关机重启<br>
+ - h             关机不重启<br>
+ now          立刻关机<br>
+ halt               关机<br>
+ reboot          重启</p>
+<h2 id="linux管道"><a class="markdownIt-Anchor" href="#linux管道">#</a> Linux 管道</h2>
+<p>将一个命令的标准输出作为另一个命令的标准输入。也就是把几个命令组合起来使用，后一个命令除以前一个命令的结果。<br>
+例：grep -r “close” /home/* | more       在 home 目录下所有文件中查找，包括 close 的文件，并分页输出。</p>
+<h2 id="linux软件包管理"><a class="markdownIt-Anchor" href="#linux软件包管理">#</a> Linux 软件包管理</h2>
+<p>dpkg (Debian Package) 管理工具，软件包名以.deb 后缀。这种方法适合系统不能联网的情况下。<br>
+比如安装 tree 命令的安装包，先将 tree.deb 传到 Linux 系统中。再使用如下命令安装。<br>
+sudo dpkg -i tree_1.5.3-1_i386.deb         安装软件<br>
+ sudo dpkg -r tree                                     卸载软件<br>
+注：将 tree.deb 传到 Linux 系统中，有多种方式。VMwareTool，使用挂载方式；使用 winSCP 工具等；<br>
+APT（Advanced Packaging Tool）高级软件工具。这种方法适合系统能够连接互联网的情况。</p>
+<p>依然以 tree 为例<br>
+ sudo apt-get install tree                         安装 tree<br>
+sudo apt-get remove tree                       卸载 tree<br>
+sudo apt-get update                                 更新软件<br>
+ sudo apt-get upgrade</p>
+<p>将.rpm 文件转为.deb 文件<br>
+.rpm 为 RedHat 使用的软件格式。在 Ubuntu 下不能直接使用，所以需要转换一下。<br>
+sudo alien abc.rpm</p>
+<h2 id="vim使用"><a class="markdownIt-Anchor" href="#vim使用">#</a> vim 使用</h2>
+<p>vim 三种模式：命令模式、插入模式、编辑模式。使用 ESC 或 i 或：来切换模式。<br>
+命令模式下：<br>
+:q                      退出<br>
+:q!                     强制退出<br>
+:wq                   保存并退出<br>
+:set number     显示行号<br>
+:set nonumber  隐藏行号<br>
+ /apache            在文档中查找 apache 按 n 跳到下一个，shift+n 上一个<br>
+ yyp                   复制光标所在行，并粘贴<br>
+ h (左移一个字符←)、j (下一行↓)、k (上一行↑)、l (右移一个字符→)</p>
+<h2 id="用户及用户组管理"><a class="markdownIt-Anchor" href="#用户及用户组管理">#</a> 用户及用户组管理</h2>
+<p>/etc/passwd    存储用户账号<br>
+ /etc/group       存储组账号<br>
+ /etc/shadow    存储用户账号的密码<br>
+ /etc/gshadow  存储用户组账号的密码<br>
+ useradd 用户名<br>
+ userdel 用户名<br>
+ adduser 用户名<br>
+ groupadd 组名<br>
+ groupdel 组名<br>
+ passwd root     给 root 设置密码<br>
+ su root<br>
+su - root<br>
+/etc/profile     系统环境变量<br>
+ bash_profile     用户环境变量<br>
+.bashrc              用户环境变量<br>
+ su user              切换用户，加载配置文件.bashrc<br>
+su - user            切换用户，加载配置文件 /etc/profile ，加载 bash_profile</p>
+<h2 id="更改文件的用户及用户组"><a class="markdownIt-Anchor" href="#更改文件的用户及用户组">#</a> 更改文件的用户及用户组</h2>
+<p>sudo chown [-R] owner[:group] {File|Directory}<br>
+ 例如：还以 jdk-7u21-linux-i586.tar.gz 为例。属于用户 hadoop，组 hadoop<br>
+ 要想切换此文件所属的用户及组。可以使用命令。<br>
+sudo chown root:root jdk-7u21-linux-i586.tar.gz</p>
+<h2 id="绝对路径用什么符号表示绝对路径用什么符号表示当前目录-上层目录用什么表示主目录用什么表示-切换目录用什么命令"><a class="markdownIt-Anchor" href="#绝对路径用什么符号表示绝对路径用什么符号表示当前目录-上层目录用什么表示主目录用什么表示-切换目录用什么命令">#</a> 绝对路径用什么符号表示绝对路径用什么符号表示？当前目录、上层目录用什么表示？主目录用什么表示？切换目录用什么命令？</h2>
+<p>绝对路径： 如 /etc/init.d<br>
+ 当前目录和上层目录： ./  …/<br>
+ 主目录： ~/<br>
+ 切换目录： cd</p>
+<h2 id="怎么查看当前进程怎么执行退出怎么查看当前路径"><a class="markdownIt-Anchor" href="#怎么查看当前进程怎么执行退出怎么查看当前路径">#</a> 怎么查看当前进程？怎么执行退出？怎么查看当前路径？</h2>
+<p>查看当前进程： ps<br>
+ 执行退出： exit<br>
+ 查看当前路径： pwd</p>
+<h2 id="怎么清屏怎么退出当前命令怎么执行睡眠怎么查看当前用户-id查看指定帮助用什么命令"><a class="markdownIt-Anchor" href="#怎么清屏怎么退出当前命令怎么执行睡眠怎么查看当前用户-id查看指定帮助用什么命令">#</a> 怎么清屏？怎么退出当前命令？怎么执行睡眠？怎么查看当前用户 id？查看指定帮助用什么命令？</h2>
+<p>清屏： clear<br>
+ 退出当前命令： ctrl+c 彻底退出<br>
+执行睡眠 ： ctrl+z 挂起当前进程 fg 恢复后台<br>
+查看当前用户 id： ”id“：查看显示目前登陆账户的 uid 和 gid 及所属分组及用户名<br>
+查看指定帮助： 如 man adduser 这个很全 而且有例子； adduser --help 这个告诉你一些常用参数； info adduesr；</p>
+<h2 id="ls-命令执行什么功能-可以带哪些参数有什么区别"><a class="markdownIt-Anchor" href="#ls-命令执行什么功能-可以带哪些参数有什么区别">#</a> Ls 命令执行什么功能？ 可以带哪些参数，有什么区别？</h2>
+<p>ls 执行的功能： 列出指定目录中的目录，以及文件<br>
+哪些参数以及区别： a 所有文件 l 详细信息，包括大小字节数，可读可写可执行的权限等</p>
+<h2 id="建立软链接快捷方式以及硬链接的命令"><a class="markdownIt-Anchor" href="#建立软链接快捷方式以及硬链接的命令">#</a> 建立软链接 (快捷方式)，以及硬链接的命令。</h2>
+<p>软链接： ln -s slink source<br>
+ 硬链接： ln link source</p>
+<h2 id="目录创建用什么命令创建文件用什么命令复制文件用什么命令"><a class="markdownIt-Anchor" href="#目录创建用什么命令创建文件用什么命令复制文件用什么命令">#</a> 目录创建用什么命令？创建文件用什么命令？复制文件用什么命令？</h2>
+<p>创建目录： mkdir<br>
+ 创建文件：典型的如 touch，vi 也可以创建文件，其实只要向一个不存在的文件输出，都会创建文件<br>
+复制文件： cp 7. 文件权限修改用什么命令？格式是怎么样的？<br>
+文件权限修改： chmod<br>
+ 格式如下：<br>
+chmodu+xfile 给 file 的属主增加执行权限  chmod 751 file 给 file 的属主分配读、写、执行 (7) 的权限，给 file 的所在组分配读、执行 (5) 的权限，给其他用户分配执行 (1) 的权限<br>
+ chmodu=rwx,g=rx,o=xfile 上例的另一种形式 chmod =r file 为所有用户分配读权限<br>
+ chmod444file 同上例 chmod a-wx,a+r file 同上例<br>
+ $ chmod -R u+r directory 递归地给 directory 目录下所有文件和子目录的属主分配读的权限</p>
+<h2 id="查看文件内容有哪些命令可以使用"><a class="markdownIt-Anchor" href="#查看文件内容有哪些命令可以使用">#</a> 查看文件内容有哪些命令可以使用？</h2>
+<p>vi 文件名 #编辑方式查看，可修改<br>
+ cat 文件名 #显示全部文件内容<br>
+ more 文件名 #分页显示文件内容<br>
+ less 文件名 #与 more 相似，更好的是可以往前翻页<br>
+ tail 文件名 #仅查看尾部，还可以指定行数<br>
+ head 文件名 #仅查看头部，还可以指定行数</p>
+<h2 id="随意写文件命令怎么向屏幕输出带空格的字符串比如hello-world"><a class="markdownIt-Anchor" href="#随意写文件命令怎么向屏幕输出带空格的字符串比如hello-world">#</a> 随意写文件命令？怎么向屏幕输出带空格的字符串，比如”hello world”?</h2>
+<p>写文件命令：vi<br>
+ 向屏幕输出带空格的字符串:echo hello world</p>
+<h2 id="终端是哪个文件夹下的哪个文件黑洞文件是哪个文件夹下的哪个命令"><a class="markdownIt-Anchor" href="#终端是哪个文件夹下的哪个文件黑洞文件是哪个文件夹下的哪个命令">#</a> 终端是哪个文件夹下的哪个文件？黑洞文件是哪个文件夹下的哪个命令？</h2>
+<p>终端  /dev/tty<br>
+ 黑洞文件  /dev/null</p>
+<h2 id="移动文件用哪个命令改名用哪个命令"><a class="markdownIt-Anchor" href="#移动文件用哪个命令改名用哪个命令">#</a> 移动文件用哪个命令？改名用哪个命令？</h2>
+<p>mv mv</p>
+<h2 id="复制文件用哪个命令如果需要连同文件夹一块复制呢如果需要有提示功能呢"><a class="markdownIt-Anchor" href="#复制文件用哪个命令如果需要连同文件夹一块复制呢如果需要有提示功能呢">#</a> 复制文件用哪个命令？如果需要连同文件夹一块复制呢？如果需要有提示功能呢？</h2>
+<p>cp cp -r  ？？？？</p>
+<h2 id="删除文件用哪个命令如果需要连目录及目录下文件一块删除呢删除空文件夹用什么命令"><a class="markdownIt-Anchor" href="#删除文件用哪个命令如果需要连目录及目录下文件一块删除呢删除空文件夹用什么命令">#</a> 删除文件用哪个命令？如果需要连目录及目录下文件一块删除呢？删除空文件夹用什么命令？</h2>
+<p>rm rm -r rmdir</p>
+<h2 id="linux-下命令有哪几种可使用的通配符分别代表什么含义"><a class="markdownIt-Anchor" href="#linux-下命令有哪几种可使用的通配符分别代表什么含义">#</a> Linux 下命令有哪几种可使用的通配符？分别代表什么含义？</h2>
+<p>“？” 可替代单个字符。<br>
+“*” 可替代任意多个字符。<br>
+方括号 “[charset]” 可替代 charset 集中的任何单个字符，如 [a-z]，[abABC]</p>
+<h2 id="对一个文件的内容进行统计用什么命令行号-单词数-字节数"><a class="markdownIt-Anchor" href="#对一个文件的内容进行统计用什么命令行号-单词数-字节数">#</a> 对一个文件的内容进行统计用什么命令？(行号、单词数、字节数)</h2>
+<p>wc 命令 - c 统计字节数 - l 统计行数 - w 统计字数。</p>
+<h2 id="grep-命令有什么用-如何忽略大小写-如何查找不含该串的行"><a class="markdownIt-Anchor" href="#grep-命令有什么用-如何忽略大小写-如何查找不含该串的行">#</a> Grep 命令有什么用？ 如何忽略大小写？ 如何查找不含该串的行？</h2>
+<p>是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹 配的行打印出来。<br>
+grep [stringSTRING] filename grep [^string] filename</p>
+<h2 id="linux-中进程有哪几种状态在-ps-显示出来的信息中分别用什么符号表示的"><a class="markdownIt-Anchor" href="#linux-中进程有哪几种状态在-ps-显示出来的信息中分别用什么符号表示的">#</a> Linux 中进程有哪几种状态？在 ps 显示出来的信息中，分别用什么符号表示的？</h2>
+<p>1）、不可中断状态：进程处于睡眠状态，但是此刻进程是不可中断的。不可中断， 指进程不响应异步信号。<br>
+（2）、暂停状态 / 跟踪状态：向进程发送一个 SIGSTOP 信号，它就会因响应该信号 而进入 TASK_STOPPED 状态；当进程正在被跟踪时，它处于 TASK_TRACED 这个特殊的状态。<br>
+“正在被跟踪” 指的是进程暂停下来，等待跟踪它的进程对它进行操作。<br>
+（3）、就绪状态：在 run_queue 队列里的状态<br>
+（4）、运行状态：在 run_queue 队列里的状态<br>
+（5）、可中断睡眠状态：处于这个状态的进程因为等待某某事件的发生（比如等待 socket 连接、等待信号量），而被挂起<br>
+（6）、zombie 状态（僵尸）：父亲没有通过 wait 系列的系统调用会顺便将子进程的尸体（task_struct）也释放掉<br>
+（7）、退出状态<br>
+ D 不可中断 Uninterruptible（usually IO）<br>
+R 正在运行，或在队列中的进程<br>
+ S 处于休眠状态<br>
+ T 停止或被追踪<br>
+ Z 僵尸进程<br>
+ W 进入内存交换（从内核 2.6 开始无效）<br>
+X 死掉的进程</p>
+<h2 id="怎么使一个命令在后台运行"><a class="markdownIt-Anchor" href="#怎么使一个命令在后台运行">#</a> 怎么使一个命令在后台运行？</h2>
+<p>一般都是使用 &amp; 在命令结尾来让程序自动运行。(命令后可以不追加空格)</p>
+<h2 id="利用-ps-怎么显示所有的进程-怎么利用-ps-查看指定进程的信息"><a class="markdownIt-Anchor" href="#利用-ps-怎么显示所有的进程-怎么利用-ps-查看指定进程的信息">#</a> 利用 ps 怎么显示所有的进程？怎么利用 ps 查看指定进程的信息？</h2>
+<p>ps -ef (system v 输出)<br>
+ ps -aux bsd 格式输出<br>
+ ps -ef | grep pid</p>
+<h2 id="专门用来查看后台任务的是哪个命令"><a class="markdownIt-Anchor" href="#专门用来查看后台任务的是哪个命令">#</a> 专门用来查看后台任务的是哪个命令？</h2>
+<p>job -l</p>
+<h2 id="把后台任务调到前台执行使用什么命令把停下的后台任务在后台执行起来用什么命令"><a class="markdownIt-Anchor" href="#把后台任务调到前台执行使用什么命令把停下的后台任务在后台执行起来用什么命令">#</a> 把后台任务调到前台执行使用什么命令？把停下的后台任务在后台执行起来用什么命令？</h2>
+<p>把后台任务调到前台执行 fg<br>
+ 把停下的后台任务在后台执行起来 bg</p>
+<p>## 终止进程用什么命令？带什么参数？<br>
+kill [-s &lt; 信息名称或编号&gt;][程序] 或 kill [-l &lt; 信息编号 &gt;]<br>
+kill-9 pid</p>
+<h2 id="怎么查看系统支持的所有信号"><a class="markdownIt-Anchor" href="#怎么查看系统支持的所有信号">#</a> 怎么查看系统支持的所有信号？</h2>
+<p>kill -l</p>
+<h2 id="搜索文件用什么命令-格式是怎么样的"><a class="markdownIt-Anchor" href="#搜索文件用什么命令-格式是怎么样的">#</a> 搜索文件用什么命令？格式是怎么样的？</h2>
+<p>find &lt;指定目录&gt; &lt; 指定条件 &gt; &lt; 指定动作 &gt;<br>
+whereis 加参数与文件名<br>
+ locate 只加文件名<br>
+ find 直接搜索磁盘，较慢。<br>
+find / -name “string*”</p>
+<h2 id="查看当前谁在使用该主机用什么命令-查找自己所在的终端信息用什么命令"><a class="markdownIt-Anchor" href="#查看当前谁在使用该主机用什么命令-查找自己所在的终端信息用什么命令">#</a> 查看当前谁在使用该主机用什么命令？查找自己所在的终端信息用什么命令？</h2>
+<p>查找自己所在的终端信息：who am i<br>
+ 查看当前谁在使用该主机：who</p>
+<h2 id="查看用过的命令列表使用什么命令"><a class="markdownIt-Anchor" href="#查看用过的命令列表使用什么命令">#</a> 查看用过的命令列表使用什么命令？</h2>
+<p>history</p>
+<h2 id="查看磁盘使用空间使用什么命令-空闲空间呢"><a class="markdownIt-Anchor" href="#查看磁盘使用空间使用什么命令-空闲空间呢">#</a> 查看磁盘使用空间使用什么命令？ 空闲空间呢？</h2>
+<p>df -hl<br>
+ 文件系统 容量 已用 可用 已用 % 挂载点<br>
+ Filesystem Size Used Avail Use% Mounted on /dev/hda2 45G 19G 24G 44% /<br>
+/dev/hda1 494M 19M 450M 4% /boot</p>
+<h2 id="查看网络是否连通使用什么命令"><a class="markdownIt-Anchor" href="#查看网络是否连通使用什么命令">#</a> 查看网络是否连通使用什么命令？</h2>
+<p>netstat</p>
+<h2 id="查看-ip-地址及接口信息使用什么命令"><a class="markdownIt-Anchor" href="#查看-ip-地址及接口信息使用什么命令">#</a> 查看 ip 地址及接口信息使用什么命令？</h2>
+<p>ifconfig</p>
+<h2 id="查看各类环境变量用什么命令"><a class="markdownIt-Anchor" href="#查看各类环境变量用什么命令">#</a> 查看各类环境变量用什么命令？</h2>
+<p>查看所有 env<br>
+ 查看某个，如 home： env $HOME</p>
+<h2 id="指定命令提示符是通过什么命令"><a class="markdownIt-Anchor" href="#指定命令提示符是通过什么命令">#</a> 指定命令提示符是通过什么命令？</h2>
+<p>\u：显示当前用户账号<br>
+ \h：显示当前主机名<br>
+ \W：只显示当前路径最后一个目录<br>
+ \w：显示当前绝对路径（当前用户目录会以～代替）<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>W</mi><mi>D</mi><mtext>：显示当前全路径</mtext></mrow><annotation encoding="application/x-tex">PWD：显示当前全路径
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">显</span><span class="mord cjk_fallback">示</span><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">全</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">径</span></span></span></span>：显示命令行’'或者’#'符号
+\#：下达的第几个命令
+\d：代表日期，格式为week day month date，例如："MonAug1"
+\t：显示时间为24小时格式，如：HH：MM：SS
+\T：显示时间为12小时格式
+\A：显示时间为24小时格式：HH：MM
+\v：BASH的版本信息 如export PS1=’[\u@\h\w\#]‘</p>
+<h2 id="查找命令的可执行文件是去哪查找的-怎么对其进行设置及添加"><a class="markdownIt-Anchor" href="#查找命令的可执行文件是去哪查找的-怎么对其进行设置及添加">#</a> 查找命令的可执行文件是去哪查找的？怎么对其进行设置及添加？</h2>
+<p>whereis [-bfmsu][-B &lt; 目录 &gt;…][-M &lt; 目录 &gt;…][-S &lt; 目录 &gt;…][文件…]<br>
+ 补充说明：whereis 指令会在特定目录中查找符合条件的文件。这些文件的烈性应属于原始代码，二进制文件，或是帮助文件。<br>
+-b   只查找二进制文件。<br>
+-B &lt;目录&gt; 只在设置的目录下查找二进制文件。 -f 不显示文件名前的路径名称。<br>
+-m   只查找说明文件。<br>
+-M &lt;目录&gt; 只在设置的目录下查找说明文件。 -s 只查找原始代码文件。<br>
+-S &lt;目录&gt; 只在设置的目录下查找原始代码文件。 -u 查找不包含指定类型的文件。<br>
+which 指令会在 PATH 变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。<br>
+-n 指定文件名长度，指定的长度必须大于或等于所有文件中最长的文件名。<br>
+-p 与 - n 参数相同，但此处的包括了文件的路径。 -w 指定输出时栏位的宽度。<br>
+-V   显示版本信息</p>
+<h2 id="对命令进行取别名"><a class="markdownIt-Anchor" href="#对命令进行取别名">#</a> 对命令进行取别名？</h2>
+<p>alias la=‘ls -a’</p>
+<h2 id="du-和-df-的定义以及区别"><a class="markdownIt-Anchor" href="#du-和-df-的定义以及区别">#</a> du 和 df 的定义，以及区别？</h2>
+<p>du 显示目录或文件的大小<br>
+ df 显示每个 &lt;文件&gt; 所在的文件系统的信息，默认是显示所有文件系统。<br>
+（文件系统分配其中的一些磁盘块用来记录它自身的一些数据，如 i 节点，磁盘分布图，间接块，超级块等。这些数据对大多数用户级的程序来说是不可见的，通常称为 Meta Data。）<br>
+du 命令是用户级的程序，它不考虑 Meta Data，而 df 命令则查看文件系统的磁盘分配图并考虑 Meta Data。<br>
+df 命令获得真正的文件系统数据，而 du 命令只查看文件系统的部分情况。</p>
+<h2 id="awk-详解"><a class="markdownIt-Anchor" href="#awk-详解">#</a> awk 详解。</h2>
+<p>awk ‘{pattern + action}’ {filenames}<br>
+#cat /etc/passwd |awk -F ‘:’ ‘{print 1&quot;\t&quot;7}’ //-F 的意思是以’:' 分隔 root /bin/bash<br>
+daemon /bin/sh 搜索 /etc/passwd 有 root 关键字的所有行<br>
+ #awk -F: ‘/root/’ /etc/passwd root❌0:0:root:/root:/bin/bash</p>
+<h2 id="给命令绑定一个宏或者按键的时候应该怎么做呢"><a class="markdownIt-Anchor" href="#给命令绑定一个宏或者按键的时候应该怎么做呢">#</a> 给命令绑定一个宏或者按键的时候，应该怎么做呢？</h2>
+<p>可以使用 bind 命令，bind 可以很方便地在 shell 中实现宏或按键的绑定。<br>
+在进行按键绑定的时候，我们需要先获取到绑定按键对应的字符序列。<br>
+比如获取 F12 的字符序列获取方法如下：先按下 Ctrl+V, 然后按下 F12 . 我们就可以得到 F12 的字符序列 ^[[24~。<br>
+接着使用 bind 进行绑定。<br>
+[root@localhost ~]# bind ‘”\e[24~&quot;:“date”’<br>
+注意：相同的按键在不同的终端或终端模拟器下可能会产生不同的字符序列。<br>
+【附】也可以使用 showkey -a 命令查看按键对应的字符序列。</p>
+<h2 id="显示当前系统支持的所有命令的列表他需要怎么做"><a class="markdownIt-Anchor" href="#显示当前系统支持的所有命令的列表他需要怎么做">#</a> 显示当前系统支持的所有命令的列表，他需要怎么做？</h2>
+<p>使用命令 compgen ­-c，可以打印出所有支持的命令列表。<br>
+[root@localhost ~]$ compgen -c</p>
+<h2 id="打印出当前的目录栈你会建议他怎么做"><a class="markdownIt-Anchor" href="#打印出当前的目录栈你会建议他怎么做">#</a> 打印出当前的目录栈，你会建议他怎么做？</h2>
+<p>使用 Linux 命令 dirs 可以将当前的目录栈打印出来。<br>
+[root@localhost ~]# dirs<br>
+/usr/share/X11<br>
+【附】：目录栈通过 pushd popd 来操作。</p>
+<h2 id="系统在多任务运行时不重启机器的条件下把所有正在运行的进程移除"><a class="markdownIt-Anchor" href="#系统在多任务运行时不重启机器的条件下把所有正在运行的进程移除">#</a> 系统在多任务运行时不重启机器的条件下，把所有正在运行的进程移除？</h2>
+<p>使用 linux 命令 ’disown -r ’可以将所有正在运行的进程移除。</p>
+<h2 id="bash-shell-中的hash-命令有什么作用"><a class="markdownIt-Anchor" href="#bash-shell-中的hash-命令有什么作用">#</a> bash shell 中的 hash 命令有什么作用？</h2>
+<p>linux 命令’hash’管理着一个内置的哈希表，记录了已执行过的命令的完整路径，用该命令可以打印出你所使用过的命令以及执行的次数。<br>
+[root@localhost ~]# hash<br>
+hits command<br>
+2 /bin/ls<br>
+2 /bin/su</p>
+<h2 id="哪一个bash内置命令能够进行数学运算"><a class="markdownIt-Anchor" href="#哪一个bash内置命令能够进行数学运算">#</a> 哪一个 bash 内置命令能够进行数学运算。</h2>
+<p>bash shell 的内置命令 let 可以进行整型数的数学运算。<br>
+#! /bin/bash<br>
+…<br>
+…<br>
+let c=a+b<br>
+…<br>
+…</p>
+<h2 id="一页一页地查看一个大文件的内容"><a class="markdownIt-Anchor" href="#一页一页地查看一个大文件的内容">#</a> 一页一页地查看一个大文件的内容</h2>
+<p>通过管道将命令”cat file_name.txt” 和 ’more’ 连接在一起可以实现这个需要.<br>
+[root@localhost ~]# cat file_name.txt | more</p>
+<h2 id="数据字典属于哪一个用户的"><a class="markdownIt-Anchor" href="#数据字典属于哪一个用户的">#</a> 数据字典属于哪一个用户的？</h2>
+<p>数据字典是属于’SYS’用户的，用户‘SYS’ 和 ’SYSEM’是由系统默认自动创建的</p>
+<h2 id="查看一个linux命令的概要与用法假设你在bin目录中偶然看到一个你从没见过的的命令怎样才能知道它的作用和用法呢"><a class="markdownIt-Anchor" href="#查看一个linux命令的概要与用法假设你在bin目录中偶然看到一个你从没见过的的命令怎样才能知道它的作用和用法呢">#</a> 查看一个 linux 命令的概要与用法？假设你在 /bin 目录中偶然看到一个你从没见过的的命令，怎样才能知道它的作用和用法呢？</h2>
+<p>使用命令 whatis 可以先出显示出这个命令的用法简要，比如，你可以使用 whatis zcat 去查看‘zcat’的介绍以及使用简要。<br>
+[root@localhost ~]# whatis zcat<br>
+zcat [gzip] (1) – compress or expand files</p>
+<h2 id="查看自己文件系统的磁盘空间配额呢"><a class="markdownIt-Anchor" href="#查看自己文件系统的磁盘空间配额呢">#</a> 查看自己文件系统的磁盘空间配额呢？</h2>
+<p>使用命令 repquota 能够显示出一个文件系统的配额信息<br>
+【附】只有 root 用户才能够查看其它用户的配额。</p>
+<h2 id="root用户"><a class="markdownIt-Anchor" href="#root用户">#</a> root 用户</h2>
+<p>root 存在于 UNIX 系统（如 AIX、BSD 等）和类 UNIX 系统（如 Debian、Redhat、Ubuntu 等版本的 Linux 系统以及 Android 系统）中，超级用户一般命名为 root，相当于 Windows 系统中的 system 用户。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2021-01-21 20:50:26" itemprop="dateModified" datetime="2021-01-21T20:50:26+08:00">2021-01-21</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="dengxingze WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="dengxingze Alipay">
+        <p>Alipay</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>dengxingze <i class="ic i-at"><em>@</em></i>DXZ
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2021/01/21/Linux%20interview%20summary/" title="Linux interview summary">http://example.com/2021/01/21/Linux interview summary/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2021/01/20/SQL%20interview%20summary%20/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicliierfjj20zk0m8npd.jpg" title="SQL interview summary">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>SQL interview summary</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text"> 常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> 系统管理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text"> 打包压缩相关命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%9C%BA%E9%87%8D%E5%90%AF%E6%9C%BA%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text"> 关机 &#x2F; 重启机器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E7%AE%A1%E9%81%93"><span class="toc-number">5.</span> <span class="toc-text"> Linux 管道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text"> Linux 软件包管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim%E4%BD%BF%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text"> vim 使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84%E7%AE%A1%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text"> 用户及用户组管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">9.</span> <span class="toc-text"> 更改文件的用户及用户组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E7%94%A8%E4%BB%80%E4%B9%88%E7%AC%A6%E5%8F%B7%E8%A1%A8%E7%A4%BA%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E7%94%A8%E4%BB%80%E4%B9%88%E7%AC%A6%E5%8F%B7%E8%A1%A8%E7%A4%BA%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95-%E4%B8%8A%E5%B1%82%E7%9B%AE%E5%BD%95%E7%94%A8%E4%BB%80%E4%B9%88%E8%A1%A8%E7%A4%BA%E4%B8%BB%E7%9B%AE%E5%BD%95%E7%94%A8%E4%BB%80%E4%B9%88%E8%A1%A8%E7%A4%BA-%E5%88%87%E6%8D%A2%E7%9B%AE%E5%BD%95%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">10.</span> <span class="toc-text"> 绝对路径用什么符号表示绝对路径用什么符号表示？当前目录、上层目录用什么表示？主目录用什么表示？切换目录用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%BF%9B%E7%A8%8B%E6%80%8E%E4%B9%88%E6%89%A7%E8%A1%8C%E9%80%80%E5%87%BA%E6%80%8E%E4%B9%88%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%B7%AF%E5%BE%84"><span class="toc-number">11.</span> <span class="toc-text"> 怎么查看当前进程？怎么执行退出？怎么查看当前路径？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%B8%85%E5%B1%8F%E6%80%8E%E4%B9%88%E9%80%80%E5%87%BA%E5%BD%93%E5%89%8D%E5%91%BD%E4%BB%A4%E6%80%8E%E4%B9%88%E6%89%A7%E8%A1%8C%E7%9D%A1%E7%9C%A0%E6%80%8E%E4%B9%88%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7-id%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%AE%9A%E5%B8%AE%E5%8A%A9%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">12.</span> <span class="toc-text"> 怎么清屏？怎么退出当前命令？怎么执行睡眠？怎么查看当前用户 id？查看指定帮助用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls-%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E4%BB%80%E4%B9%88%E5%8A%9F%E8%83%BD-%E5%8F%AF%E4%BB%A5%E5%B8%A6%E5%93%AA%E4%BA%9B%E5%8F%82%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-number">13.</span> <span class="toc-text"> Ls 命令执行什么功能？ 可以带哪些参数，有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E8%BD%AF%E9%93%BE%E6%8E%A5%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E4%BB%A5%E5%8F%8A%E7%A1%AC%E9%93%BE%E6%8E%A5%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">14.</span> <span class="toc-text"> 建立软链接 (快捷方式)，以及硬链接的命令。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E5%88%9B%E5%BB%BA%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text"> 目录创建用什么命令？创建文件用什么命令？复制文件用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9C%89%E5%93%AA%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8"><span class="toc-number">16.</span> <span class="toc-text"> 查看文件内容有哪些命令可以使用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%84%8F%E5%86%99%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4%E6%80%8E%E4%B9%88%E5%90%91%E5%B1%8F%E5%B9%95%E8%BE%93%E5%87%BA%E5%B8%A6%E7%A9%BA%E6%A0%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E5%A6%82hello-world"><span class="toc-number">17.</span> <span class="toc-text"> 随意写文件命令？怎么向屏幕输出带空格的字符串，比如”hello world”?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E7%AB%AF%E6%98%AF%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%E9%BB%91%E6%B4%9E%E6%96%87%E4%BB%B6%E6%98%AF%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E7%9A%84%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-number">18.</span> <span class="toc-text"> 终端是哪个文件夹下的哪个文件？黑洞文件是哪个文件夹下的哪个命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E6%94%B9%E5%90%8D%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-number">19.</span> <span class="toc-text"> 移动文件用哪个命令？改名用哪个命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E8%BF%9E%E5%90%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%80%E5%9D%97%E5%A4%8D%E5%88%B6%E5%91%A2%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E6%9C%89%E6%8F%90%E7%A4%BA%E5%8A%9F%E8%83%BD%E5%91%A2"><span class="toc-number">20.</span> <span class="toc-text"> 复制文件用哪个命令？如果需要连同文件夹一块复制呢？如果需要有提示功能呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E7%94%A8%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4%E5%A6%82%E6%9E%9C%E9%9C%80%E8%A6%81%E8%BF%9E%E7%9B%AE%E5%BD%95%E5%8F%8A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%96%87%E4%BB%B6%E4%B8%80%E5%9D%97%E5%88%A0%E9%99%A4%E5%91%A2%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">21.</span> <span class="toc-text"> 删除文件用哪个命令？如果需要连目录及目录下文件一块删除呢？删除空文件夹用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E9%80%9A%E9%85%8D%E7%AC%A6%E5%88%86%E5%88%AB%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88%E5%90%AB%E4%B9%89"><span class="toc-number">22.</span> <span class="toc-text"> Linux 下命令有哪几种可使用的通配符？分别代表什么含义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E7%BB%9F%E8%AE%A1%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%B7-%E5%8D%95%E8%AF%8D%E6%95%B0-%E5%AD%97%E8%8A%82%E6%95%B0"><span class="toc-number">23.</span> <span class="toc-text"> 对一个文件的内容进行统计用什么命令？(行号、单词数、字节数)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep-%E5%91%BD%E4%BB%A4%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8-%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99-%E5%A6%82%E4%BD%95%E6%9F%A5%E6%89%BE%E4%B8%8D%E5%90%AB%E8%AF%A5%E4%B8%B2%E7%9A%84%E8%A1%8C"><span class="toc-number">24.</span> <span class="toc-text"> Grep 命令有什么用？ 如何忽略大小写？ 如何查找不含该串的行？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-%E4%B8%AD%E8%BF%9B%E7%A8%8B%E6%9C%89%E5%93%AA%E5%87%A0%E7%A7%8D%E7%8A%B6%E6%80%81%E5%9C%A8-ps-%E6%98%BE%E7%A4%BA%E5%87%BA%E6%9D%A5%E7%9A%84%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%88%86%E5%88%AB%E7%94%A8%E4%BB%80%E4%B9%88%E7%AC%A6%E5%8F%B7%E8%A1%A8%E7%A4%BA%E7%9A%84"><span class="toc-number">25.</span> <span class="toc-text"> Linux 中进程有哪几种状态？在 ps 显示出来的信息中，分别用什么符号表示的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E4%BD%BF%E4%B8%80%E4%B8%AA%E5%91%BD%E4%BB%A4%E5%9C%A8%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C"><span class="toc-number">26.</span> <span class="toc-text"> 怎么使一个命令在后台运行？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8-ps-%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E6%89%80%E6%9C%89%E7%9A%84%E8%BF%9B%E7%A8%8B-%E6%80%8E%E4%B9%88%E5%88%A9%E7%94%A8-ps-%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%AE%9A%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-number">27.</span> <span class="toc-text"> 利用 ps 怎么显示所有的进程？怎么利用 ps 查看指定进程的信息？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%93%E9%97%A8%E7%94%A8%E6%9D%A5%E6%9F%A5%E7%9C%8B%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%98%AF%E5%93%AA%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-number">28.</span> <span class="toc-text"> 专门用来查看后台任务的是哪个命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%88%B0%E5%89%8D%E5%8F%B0%E6%89%A7%E8%A1%8C%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4%E6%8A%8A%E5%81%9C%E4%B8%8B%E7%9A%84%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E5%9C%A8%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E8%B5%B7%E6%9D%A5%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">29.</span> <span class="toc-text"> 把后台任务调到前台执行使用什么命令？把停下的后台任务在后台执行起来用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9A%84%E6%89%80%E6%9C%89%E4%BF%A1%E5%8F%B7"><span class="toc-number">30.</span> <span class="toc-text"> 怎么查看系统支持的所有信号？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4-%E6%A0%BC%E5%BC%8F%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84"><span class="toc-number">31.</span> <span class="toc-text"> 搜索文件用什么命令？格式是怎么样的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%B0%81%E5%9C%A8%E4%BD%BF%E7%94%A8%E8%AF%A5%E4%B8%BB%E6%9C%BA%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4-%E6%9F%A5%E6%89%BE%E8%87%AA%E5%B7%B1%E6%89%80%E5%9C%A8%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BF%A1%E6%81%AF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">32.</span> <span class="toc-text"> 查看当前谁在使用该主机用什么命令？查找自己所在的终端信息用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E8%BF%87%E7%9A%84%E5%91%BD%E4%BB%A4%E5%88%97%E8%A1%A8%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">33.</span> <span class="toc-text"> 查看用过的命令列表使用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E7%A9%BA%E9%97%B4%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4-%E7%A9%BA%E9%97%B2%E7%A9%BA%E9%97%B4%E5%91%A2"><span class="toc-number">34.</span> <span class="toc-text"> 查看磁盘使用空间使用什么命令？ 空闲空间呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C%E6%98%AF%E5%90%A6%E8%BF%9E%E9%80%9A%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">35.</span> <span class="toc-text"> 查看网络是否连通使用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-ip-%E5%9C%B0%E5%9D%80%E5%8F%8A%E6%8E%A5%E5%8F%A3%E4%BF%A1%E6%81%AF%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">36.</span> <span class="toc-text"> 查看 ip 地址及接口信息使用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%90%84%E7%B1%BB%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%94%A8%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">37.</span> <span class="toc-text"> 查看各类环境变量用什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E6%98%AF%E9%80%9A%E8%BF%87%E4%BB%80%E4%B9%88%E5%91%BD%E4%BB%A4"><span class="toc-number">38.</span> <span class="toc-text"> 指定命令提示符是通过什么命令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E6%98%AF%E5%8E%BB%E5%93%AA%E6%9F%A5%E6%89%BE%E7%9A%84-%E6%80%8E%E4%B9%88%E5%AF%B9%E5%85%B6%E8%BF%9B%E8%A1%8C%E8%AE%BE%E7%BD%AE%E5%8F%8A%E6%B7%BB%E5%8A%A0"><span class="toc-number">39.</span> <span class="toc-text"> 查找命令的可执行文件是去哪查找的？怎么对其进行设置及添加？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%91%BD%E4%BB%A4%E8%BF%9B%E8%A1%8C%E5%8F%96%E5%88%AB%E5%90%8D"><span class="toc-number">40.</span> <span class="toc-text"> 对命令进行取别名？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#du-%E5%92%8C-df-%E7%9A%84%E5%AE%9A%E4%B9%89%E4%BB%A5%E5%8F%8A%E5%8C%BA%E5%88%AB"><span class="toc-number">41.</span> <span class="toc-text"> du 和 df 的定义，以及区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk-%E8%AF%A6%E8%A7%A3"><span class="toc-number">42.</span> <span class="toc-text"> awk 详解。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%91%BD%E4%BB%A4%E7%BB%91%E5%AE%9A%E4%B8%80%E4%B8%AA%E5%AE%8F%E6%88%96%E8%80%85%E6%8C%89%E9%94%AE%E7%9A%84%E6%97%B6%E5%80%99%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A%E5%91%A2"><span class="toc-number">43.</span> <span class="toc-text"> 给命令绑定一个宏或者按键的时候，应该怎么做呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9A%84%E6%89%80%E6%9C%89%E5%91%BD%E4%BB%A4%E7%9A%84%E5%88%97%E8%A1%A8%E4%BB%96%E9%9C%80%E8%A6%81%E6%80%8E%E4%B9%88%E5%81%9A"><span class="toc-number">44.</span> <span class="toc-text"> 显示当前系统支持的所有命令的列表，他需要怎么做？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8D%B0%E5%87%BA%E5%BD%93%E5%89%8D%E7%9A%84%E7%9B%AE%E5%BD%95%E6%A0%88%E4%BD%A0%E4%BC%9A%E5%BB%BA%E8%AE%AE%E4%BB%96%E6%80%8E%E4%B9%88%E5%81%9A"><span class="toc-number">45.</span> <span class="toc-text"> 打印出当前的目录栈，你会建议他怎么做？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%9C%A8%E5%A4%9A%E4%BB%BB%E5%8A%A1%E8%BF%90%E8%A1%8C%E6%97%B6%E4%B8%8D%E9%87%8D%E5%90%AF%E6%9C%BA%E5%99%A8%E7%9A%84%E6%9D%A1%E4%BB%B6%E4%B8%8B%E6%8A%8A%E6%89%80%E6%9C%89%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%9B%E7%A8%8B%E7%A7%BB%E9%99%A4"><span class="toc-number">46.</span> <span class="toc-text"> 系统在多任务运行时不重启机器的条件下，把所有正在运行的进程移除？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bash-shell-%E4%B8%AD%E7%9A%84hash-%E5%91%BD%E4%BB%A4%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8"><span class="toc-number">47.</span> <span class="toc-text"> bash shell 中的 hash 命令有什么作用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%B8%80%E4%B8%AAbash%E5%86%85%E7%BD%AE%E5%91%BD%E4%BB%A4%E8%83%BD%E5%A4%9F%E8%BF%9B%E8%A1%8C%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-number">48.</span> <span class="toc-text"> 哪一个 bash 内置命令能够进行数学运算。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E9%A1%B5%E4%B8%80%E9%A1%B5%E5%9C%B0%E6%9F%A5%E7%9C%8B%E4%B8%80%E4%B8%AA%E5%A4%A7%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">49.</span> <span class="toc-text"> 一页一页地查看一个大文件的内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E5%B1%9E%E4%BA%8E%E5%93%AA%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9A%84"><span class="toc-number">50.</span> <span class="toc-text"> 数据字典属于哪一个用户的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%B8%80%E4%B8%AAlinux%E5%91%BD%E4%BB%A4%E7%9A%84%E6%A6%82%E8%A6%81%E4%B8%8E%E7%94%A8%E6%B3%95%E5%81%87%E8%AE%BE%E4%BD%A0%E5%9C%A8bin%E7%9B%AE%E5%BD%95%E4%B8%AD%E5%81%B6%E7%84%B6%E7%9C%8B%E5%88%B0%E4%B8%80%E4%B8%AA%E4%BD%A0%E4%BB%8E%E6%B2%A1%E8%A7%81%E8%BF%87%E7%9A%84%E7%9A%84%E5%91%BD%E4%BB%A4%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E7%9F%A5%E9%81%93%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E7%94%A8%E6%B3%95%E5%91%A2"><span class="toc-number">51.</span> <span class="toc-text"> 查看一个 linux 命令的概要与用法？假设你在 &#x2F;bin 目录中偶然看到一个你从没见过的的命令，怎样才能知道它的作用和用法呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4%E9%85%8D%E9%A2%9D%E5%91%A2"><span class="toc-number">52.</span> <span class="toc-text"> 查看自己文件系统的磁盘空间配额呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#root%E7%94%A8%E6%88%B7"><span class="toc-number">53.</span> <span class="toc-text"> root 用户</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="dengxingze"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">dengxingze</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">4</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlbmd4aW5nemU=" title="https:&#x2F;&#x2F;github.com&#x2F;dengxingze"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9lLW1vLTE5LTI2" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;e-mo-19-26"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTE1ODE1NzM5NDY=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;1581573946"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS82NDk1MDk1NTMxP2lzX2FsbD0xI19sb2dpbkxheWVyXzE2MTAwODA2NTUwODQ=" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6495095531?is_all&#x3D;1#_loginLayer_1610080655084"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/20/SQL%20interview%20summary%20/" title="SQL interview summary">SQL interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/21/Linux%20interview%20summary/" title="Linux interview summary">Linux interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/17/Java%20interview%20summary/" title="Java interview summary">Java interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/08/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">dengxingze @ Dengxingze's blog</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2021/01/21/Linux interview summary/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
