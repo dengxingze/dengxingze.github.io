@@ -758,9 +758,9 @@ zcat [gzip] (1) – compress or expand files&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2021/01/20/SQL%20interview%20summary%20/</guid>
+            <guid isPermalink="true">http://example.com/2021/01/20/SQL%20interview%20summary/</guid>
             <title>SQL interview summary</title>
-            <link>http://example.com/2021/01/20/SQL%20interview%20summary%20/</link>
+            <link>http://example.com/2021/01/20/SQL%20interview%20summary/</link>
             <pubDate>Wed, 20 Jan 2021 15:50:35 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;一-第一-第二-第三范式之间的理解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-第一-第二-第三范式之间的理解&#34;&gt;#&lt;/a&gt; 一、第一、第二、第三范式之间的理解&lt;/h2&gt;
 &lt;p&gt;第一范式（1NF）无重复的列&lt;br&gt;
