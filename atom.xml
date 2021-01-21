@@ -8,15 +8,12 @@
         <id>http://example.com/2021/01/20/SQL%20interview%20summary%20/</id>
         <title>SQL interview summary</title>
         <link rel="alternate" href="http://example.com/2021/01/20/SQL%20interview%20summary%20/"/>
-        <content type="html">&lt;p&gt;第一范式（1NF）无重复的列&lt;br&gt;
+        <content type="html">&lt;p&gt;一、第一、第二、第三范式之间的理解&lt;br&gt;
+第一范式（1NF）无重复的列&lt;br&gt;
 　　所谓第一范式（1NF）是指数据库表的每一列都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。如果出现重复的属性，就可能需要定义一个新的实体，新的实体由重复的属性构成，新实体与原实体之间为一对多关系。在第一范式（1NF）中表的每一行只包含一个实例的信息。简而言之，第一范式就是无重复的列。&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
-&lt;p&gt;1NF 的定义为：符合 1NF 的关系中的每个属性都不可再分&lt;/p&gt;
-&lt;p&gt;下表所示情况，便不符合 1NF 的要求：&lt;/p&gt;
-&lt;ul&gt;
-https://images2017.cnblogs.com/blog/876623/201711/876623-20171102232633451-117447723.png
-&lt;/ul&gt;
-&lt;p&gt;说明：在任何一个关系数据库中，第一范式（1NF）是对关系模式的基本要求，不满足第一范式（1NF）的数据库就不是关系数据库。&lt;/p&gt;
+&lt;p&gt;1NF 的定义为：符合 1NF 的关系中的每个属性都不可再分&lt;br&gt;
+说明：在任何一个关系数据库中，第一范式（1NF）是对关系模式的基本要求，不满足第一范式（1NF）的数据库就不是关系数据库。&lt;/p&gt;
 &lt;p&gt;第二范式（2NF）属性完全依赖于主键&lt;br&gt;
 　　第二范式（2NF）是在第一范式（1NF）的基础上建立起来的，即满足第二范式（2NF）必须先满足第一范式（1NF）。第二范式（2NF）要求数据库表中的每个实例或行必须可以被惟一地区分。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。例如员工信息表中加上了员工编号（emp_id）列，因为每个员工的员工编号是惟一的，因此每个员工可以被惟一区分。这个惟一属性列被称为主关键字或主键、主码。&lt;br&gt;
 第二范式（2NF）要求实体的属性完全依赖于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。简而言之，第二范式就是属性完全依赖于主键。&lt;/p&gt;
@@ -35,6 +32,31 @@ JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。�
 JDK 是 java 开发工具包，&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;p&gt;是程序员使用 java 语言编写 java 程序所需的开发工具包，是提供给程序员使用的。JDK 包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具：jconsole，jvisualvm 等工具软件，还包含了 java 程序编写所需的文档和 demo 例子程序。如果你需要运行 java 程序，只需安装 JRE 就可以了。如果你需要编写 java 程序，需要安装 JDK。&lt;/p&gt;
+&lt;p&gt;SSM：Spring+SpringMVC+Mybatis&lt;br&gt;
+ 一、Spring&lt;br&gt;
+1、Spring 在 ssm 中起什么作用？&lt;/p&gt;
+&lt;p&gt;Spring：轻量级框架&lt;/p&gt;
+&lt;p&gt;作用：Bean 工厂，用来管理 Bean 的生命周期和框架集成。&lt;/p&gt;
+&lt;p&gt;两大核心：&lt;/p&gt;
+&lt;p&gt;①. IOC/DI (控制反转 / 依赖注入) ：把 dao 依赖注入到 service 层，service 层反转给 action 层，Spring 顶层容器为 BeanFactory。&lt;/p&gt;
+&lt;p&gt;②. AOP：面向切面编程&lt;/p&gt;
+&lt;p&gt;2、Spring 的事务？&lt;/p&gt;
+&lt;p&gt;编程式事务管理：编程方式管理事务，极大灵活性，难维护。&lt;/p&gt;
+&lt;p&gt;声明式事务管理：可以将业务代码和事务管理分离，用注解和 xml 配置来管理事务。&lt;/p&gt;
+&lt;p&gt;3、IOC 在项目中的作用？&lt;/p&gt;
+&lt;p&gt;作用：Ioc 解决对象之间的依赖问题，把所有 Bean 的依赖关系通过配置文件或注解关联起来，降低了耦合度。&lt;/p&gt;
+&lt;p&gt;4、Spring 的配置文件中的内容？&lt;/p&gt;
+&lt;p&gt;开启事务注解驱动&lt;/p&gt;
+&lt;p&gt;事务管理器&lt;/p&gt;
+&lt;p&gt;开启注解功能，并配置扫描包&lt;/p&gt;
+&lt;p&gt;配置数据库&lt;/p&gt;
+&lt;p&gt;配置 SQL 会话工厂，别名，映射文件&lt;/p&gt;
+&lt;p&gt;不用编写 Dao 层的实现类&lt;/p&gt;
+&lt;p&gt;5、Spring 下的注解？&lt;/p&gt;
+&lt;p&gt;注册：@Controller @Service @Component&lt;/p&gt;
+&lt;p&gt;注入：@Autowired @Resource&lt;/p&gt;
+&lt;p&gt;请求地址：@RequestMapping&lt;/p&gt;
+&lt;p&gt;返回具体数据类型而非跳转：@ResponseBody&lt;/p&gt;
 </content>
         <updated>2021-01-17T10:21:37.380Z</updated>
     </entry>
