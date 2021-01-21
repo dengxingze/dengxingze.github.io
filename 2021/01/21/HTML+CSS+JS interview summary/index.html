@@ -30,7 +30,7 @@
 
 
   <title>
-Hello World |
+HTML+CSS+JS interview summary |
 Dengxingze's blog = DXZ</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,7 +58,7 @@ Dengxingze's blog = DXZ</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Hello World
+  <h1 itemprop="name headline">HTML+CSS+JS interview summary
   </h1>
   
 <div class="meta">
@@ -100,12 +100,12 @@ Dengxingze's blog = DXZ</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
-          <li class="item" data-background-image="http://pic2.bbzhi.com/qitabizhi/kuanpingxingkongdiqiu/kuanpingxingkongdiqiu_86378_9.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
           <li class="item" data-background-image="http://pic3.bbzhi.com/xitongbizhi/huanxiangxingqiukuanpinggaoqingbi/computer_kuan_263545_9.jpg"></li>
-          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,27 +151,27 @@ Dengxingze's blog = DXZ</title>
 
     <p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vcWlpbGVlL3AvNjkxNzk0Mi5odG1s">https://www.cnblogs.com/qiilee/p/6917942.html</span><br>
 1、 你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么？<br>
-IE: trident 内核</p>
-<p>Firefox：gecko 内核</p>
-<p>Safari:webkit 内核</p>
-<p>Opera: 以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核</p>
-<p>Chrome:Blink (基于 webkit，Google 与 Opera Software 共同开发)</p>
+IE: trident 内核<br>
+ Firefox：gecko 内核<br>
+ Safari:webkit 内核<br>
+ Opera: 以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核<br>
+ Chrome:Blink (基于 webkit，Google 与 Opera Software 共同开发)</p>
 <p>2、你能描述一下渐进增强和优雅降级之间的不同吗？<br>
- 渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
-<p>优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
-<p>3、请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
-<p>sessionStorage 用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此 sessionStorage 不是一种持久化的本地存储，仅仅是会话级别的存储。而 localStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
-<p>web storage 和 cookie 的区别</p>
-<p>Web Storage 的概念和 cookie 相似，区别是它是为了更大容量存储设计的。Cookie 的大小是受限的，并且每次你请求一个新的页面的时候 Cookie 都会被发送过去，这样无形中浪费了带宽，另外 cookie 还需要指定作用域，不可以跨域调用。</p>
-<p>除此之外，Web Storage 拥有 setItem,getItem,removeItem,clear 等方法，不像 cookie 需要前端开发者自己封装 setCookie，getCookie。但是 Cookie 也是不可以或缺的：Cookie 的作用是与服务器进行交互，作为 HTTP 规范的一部分而存在 ，而 Web Storage 仅仅是为了在本地 “存储” 数据而生。</p>
-<p>4、一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</p>
-<p>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</p>
-<p>如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</p>
-<p>如果图片为 css 图片，可以使用 CSSsprite，SVGsprite，Iconfont、Base64 等技术。</p>
-<p>如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</p>
-<p>如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。</p>
-<p>5、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？</p>
-<p>针对不同的浏览器写不同的 CSS code 的过程，就是 CSS hack。</p>
+ 渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>
+优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<p>3、请描述一下 cookies，sessionStorage 和 localStorage 的区别？<br>
+sessionStorage 用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此 sessionStorage 不是一种持久化的本地存储，仅仅是会话级别的存储。而 localStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。<br>
+web storage 和 cookie 的区别<br>
+ Web Storage 的概念和 cookie 相似，区别是它是为了更大容量存储设计的。Cookie 的大小是受限的，并且每次你请求一个新的页面的时候 Cookie 都会被发送过去，这样无形中浪费了带宽，另外 cookie 还需要指定作用域，不可以跨域调用。<br>
+除此之外，Web Storage 拥有 setItem,getItem,removeItem,clear 等方法，不像 cookie 需要前端开发者自己封装 setCookie，getCookie。但是 Cookie 也是不可以或缺的：Cookie 的作用是与服务器进行交互，作为 HTTP 规范的一部分而存在 ，而 Web Storage 仅仅是为了在本地 “存储” 数据而生。</p>
+<p>4、一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。<br>
+图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。<br>
+如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。<br>
+如果图片为 css 图片，可以使用 CSSsprite，SVGsprite，Iconfont、Base64 等技术。<br>
+如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。<br>
+如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。</p>
+<p>5、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？<br>
+针对不同的浏览器写不同的 CSS code 的过程，就是 CSS hack。</p>
 <p>#test{</p>
 <pre><code>width:300px;  
 
@@ -193,25 +193,25 @@ _       /*ie6*/    &#125;
 
 @media screen and (-webkit-min-device-pixel-ratio:0)&#123; #test &#123;background-color:gray;&#125; &#125;       /*chrome and safari*/
 </code></pre>
-<p>6、Sass、LESS 是什么？大家为什么要使用他们？</p>
-<p>他们是 CSS 预处理器。他是 CSS 上的一种抽象层。他们是一种特殊的语法 / 语言编译成 CSS。</p>
-<p>例如 Less 是一种动态样式语言。将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。</p>
-<p>为什么要使用它们？</p>
-<p>结构清晰，便于扩展。</p>
-<p>可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。</p>
-<p>可以轻松实现多重继承。</p>
-<p>完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</p>
-<p>7、html 常见兼容性问题？</p>
-<p>1. 双边距 BUG float 引起的  使用 display</p>
-<p>2.3 像素问题 使用 float 引起的 使用 dislpay:inline -3px</p>
-<p>3. 超链接 hover 点击后失效  使用正确的书写顺序 link visited hover active</p>
-<p><span class="exturl" data-url="aHR0cDovLzQuSWU=">4.Ie</span> z-index 问题 给父级添加 position:relative</p>
-<p>5.Png 透明 使用 js 代码 改</p>
-<p>6.Min-height 最小高度 ！Important 解决’</p>
-<p>7.select 在 ie6 下遮盖 使用 iframe 嵌套</p>
-<p>8. 为什么没有办法定义 1px 左右的宽度容器（IE6 默认的行高造成的，使用 over:hidden,zoom:0.08 line-height:1px）</p>
-<p>9.IE5-8 不支持 opacity，解决办法：</p>
-<p>.opacity {</p>
+<p>6、Sass、LESS 是什么？大家为什么要使用他们？<br>
+他们是 CSS 预处理器。他是 CSS 上的一种抽象层。他们是一种特殊的语法 / 语言编译成 CSS。<br>
+例如 Less 是一种动态样式语言。将 CSS 赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持 IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。<br>
+为什么要使用它们？<br>
+结构清晰，便于扩展。<br>
+可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。<br>
+可以轻松实现多重继承。<br>
+完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</p>
+<p>7、html 常见兼容性问题？<br>
+1. 双边距 BUG float 引起的  使用 display<br>
+2.3 像素问题 使用 float 引起的 使用 dislpay:inline -3px<br>
+3. 超链接 hover 点击后失效  使用正确的书写顺序 link visited hover active<br>
+<span class="exturl" data-url="aHR0cDovLzQuSWU=">4.Ie</span> z-index 问题 给父级添加 position:relative<br>
+5.Png 透明 使用 js 代码 改<br>
+ 6.Min-height 最小高度 ！Important 解决’<br>
+7.select 在 ie6 下遮盖 使用 iframe 嵌套<br>
+ 8. 为什么没有办法定义 1px 左右的宽度容器（IE6 默认的行高造成的，使用 over:hidden,zoom:0.08 line-height:1px）<br>
+9.IE5-8 不支持 opacity，解决办法：<br>
+.opacity {</p>
 <pre><code>opacity: 0.4
 
 filter: alpha(opacity=60); /* for IE5-7 */
@@ -220,61 +220,61 @@ filter: alpha(opacity=60); /* for IE5-7 */
 </code></pre>
 <p>}</p>
 <p>IE6 不支持 PNG 透明背景，解决办法: IE6 下使用 gif 图片<br>
- 8、描述一个”reset” 的 CSS 文件并如何使用它。知道 normalize.css 吗？你了解他们的不同    之处？</p>
-<p>因为浏览器的品种很多，每个浏览器的默认样式也是不同的，比如<button>标签，在 IE 浏览器、Firefox 浏览器以及 Safari 浏览器中的样式都是不同的，所以，通过重置 button 标签的 CSS 属性，然后再将它统一定义，就可以产生相同的显示效果。</p>
-<p>你可能会用 Normalize 来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。</p>
-<p>9、一边宽度固定，另一边自适应？</p>
-<p>1）第一种：float 单一层浮动法</p>
-<p>例如：左侧固定成 100px; 则核心代码 左侧：width:100px;float:left;</p>
-<p>右侧 width:auto;margin-left:100px;</p>
-<p>2）第二种：定位 ，在固定元素上加入绝对定位，自适应元素设置成 margin-left: 固定元素的宽度</p>
-<p>3）通过 BFC 规则实现</p>
-<p float:left;width:200px;height:200px;="">例如：.left</p>
+ 8、描述一个”reset” 的 CSS 文件并如何使用它。知道 normalize.css 吗？你了解他们的不同    之处？<br>
+因为浏览器的品种很多，每个浏览器的默认样式也是不同的，比如<button>标签，在 IE 浏览器、Firefox 浏览器以及 Safari 浏览器中的样式都是不同的，所以，通过重置 button 标签的 CSS 属性，然后再将它统一定义，就可以产生相同的显示效果。<br>
+你可能会用 Normalize 来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。</p>
+<p float:left;width:200px;height:200px;="">9、一边宽度固定，另一边自适应？<br>
+1）第一种：float 单一层浮动法<br>
+例如：左侧固定成 100px; 则核心代码 左侧：width:100px;float:left;<br>
+ 右侧 width:auto;margin-left:100px;<br>
+2）第二种：定位 ，在固定元素上加入绝对定位，自适应元素设置成 margin-left: 固定元素的宽度<br>
+ 3）通过 BFC 规则实现<br>
+例如：.left</p>
 <pre><code>     .right&#123;width:100%;overflow:hidden;height:200px&#125;
 </code></pre>
-<p>10、什么是圣杯布局？</p>
-<p>左右两边的内容保持不变，中间的内容可以根据屏幕的大小的改变而改变。</p>
-<p>1 .content {</p>
-<p>2 padding: 0 200px;</p>
-<p>3 height: 200px;</p>
-<p>4 min-width: 200px;</p>
-<p>5 }</p>
-<p>.left {</p>
-<p>6 width: 200px;</p>
-<p>7 height: 200px;</p>
-<p>8 background: red;</p>
-<p>9 float: left;</p>
-<p>10 margin-left: -200px;</p>
-<p>11 }</p>
-<p>12 .right {</p>
-<p>13 width: 200px;</p>
-<p>14 height: 200px;</p>
-<p>15 background: yellow;</p>
-<p>16 float: right;</p>
-<p>17 margin-right: -200px;</p>
-<p>18 }</p>
-<p>19 .center {</p>
-<p>20 width: 100%;</p>
-<p>21 min-width: 200px;</p>
-<p>22 height: 200px;</p>
-<p>23 background: green;</p>
-<p>24 float: left;</p>
-<p>25 }</p>
-<p>26 </style></p>
-<p>27 </head></p>
-<p>28 <body></p>
-<p>29 <div class="content"></p>
-<p>30 <div class="left"></div></p>
-<p>31 <div class="center"></div></p>
-<p>32 <div class="right"></div></p>
-<p>33 </div></p>
-<p>11、div 中子元素居中的三种方式？</p>
-<p>首先 div 设置为相对定位 relative, 子元素设置为绝对定位 absolute</p>
-<p position:absolute;left:0;top:0;bottom:0;right:0;margin:auto="">第一种 #div.img</p>
-<p>第二种</p>
-<p position:absoulute;left:50%;top:50%;margin-left:img的12width；margin-top:-img的12height;="">#div.img</p>
-<p>HTML5+CSS3</p>
-<p>1、html5 有哪些新特性、移除了那些元素？如何处理 HTML5 新标签的浏览器兼容问题？</p>
+<p>10、什么是圣杯布局？<br>
+左右两边的内容保持不变，中间的内容可以根据屏幕的大小的改变而改变。<br>
+1 .content {<br>
+2 padding: 0 200px;<br>
+3 height: 200px;<br>
+4 min-width: 200px;<br>
+5 }<br>
+.left {<br>
+6 width: 200px;<br>
+7 height: 200px;<br>
+8 background: red;<br>
+9 float: left;<br>
+10 margin-left: -200px;<br>
+11 }<br>
+12 .right {<br>
+13 width: 200px;<br>
+14 height: 200px;<br>
+15 background: yellow;<br>
+16 float: right;<br>
+17 margin-right: -200px;<br>
+18 }<br>
+19 .center {<br>
+20 width: 100%;<br>
+21 min-width: 200px;<br>
+22 height: 200px;<br>
+23 background: green;<br>
+24 float: left;<br>
+25 }<br>
+26 </style><br>
+27 </head><br>
+28 <body><br>
+29 <div class="content"><br>
+30 <div class="left"></div><br>
+31 <div class="center"></div><br>
+32 <div class="right"></div><br>
+33 </div></p>
+<p>11、div 中子元素居中的三种方式？<br>
+首先 div 设置为相对定位 relative, 子元素设置为绝对定位 absolute<br>
+ 第一种 #div.img {position:absolute;left:0;top:0;bottom:0;right:0;margin:auto}<br>
+ 第二种<br>
+ #div.img {position:absoulute;left:50%;top:50%;margin-left:img 的 1/2width；margin-top:-img 的 1/2height;}<br>
+HTML5+CSS3<br>
+1、html5 有哪些新特性、移除了那些元素？如何处理 HTML5 新标签的浏览器兼容问题？</p>
 <p>新特性：</p>
 <ol>
 <li>
@@ -582,7 +582,7 @@ success: function(data) &#123;
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-01-21 21:07:43" itemprop="dateModified" datetime="2021-01-21T21:07:43+08:00">2021-01-21</time>
+    <time title="Modified: 2021-01-21 21:57:06" itemprop="dateModified" datetime="2021-01-21T21:57:06+08:00">2021-01-21</time>
   </span>
 </div>
 
@@ -613,7 +613,7 @@ success: function(data) &#123;
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://example.com/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="Hello World">http://example.com/2021/01/21/HTML+CSS+JS interview summary/</a>
+    <a href="http://example.com/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="HTML+CSS+JS interview summary">http://example.com/2021/01/21/HTML+CSS+JS interview summary/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -632,7 +632,7 @@ success: function(data) &#123;
     <div class="item left">
       
 
-  <a href="/2021/01/21/Linux%20interview%20summary/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="Linux interview summary">
+  <a href="/2021/01/21/Linux%20interview%20summary/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="Linux interview summary">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Linux interview summary</h3>
@@ -726,24 +726,6 @@ success: function(data) &#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/08/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/20/SQL%20interview%20summary%20/" title="SQL interview summary">SQL interview summary</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/01/21/Linux%20interview%20summary/" title="Linux interview summary">Linux interview summary</a></span>
   </li>
 
@@ -753,7 +735,16 @@ success: function(data) &#123;
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="Hello World">Hello World</a></span>
+    <span><a href="/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="HTML+CSS+JS interview summary">HTML+CSS+JS interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/08/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -763,6 +754,15 @@ success: function(data) &#123;
 </div>
 
     <span><a href="/2021/01/17/Java%20interview%20summary/" title="Java interview summary">Java interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/20/SQL%20interview%20summary%20/" title="SQL interview summary">SQL interview summary</a></span>
   </li>
 
   </ul>
