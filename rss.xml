@@ -30,7 +30,8 @@
             <title>Java interview summary</title>
             <link>http://example.com/2021/01/17/Java%20interview%20summary/</link>
             <pubDate>Sun, 17 Jan 2021 18:21:37 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;jre与jdk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jre与jdk&#34;&gt;#&lt;/a&gt; JRE 与 JDK&lt;/h2&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;仨&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#仨&#34;&gt;#&lt;/a&gt; 仨&lt;/h1&gt;
+&lt;h2 id=&#34;jre与jdk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jre与jdk&#34;&gt;#&lt;/a&gt; JRE 与 JDK&lt;/h2&gt;
 &lt;p&gt;JRE： Java Runtime Environment&lt;br&gt;
 JDK：Java Development Kit&lt;br&gt;
 JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。是使用 java 语言编写的程序运行所需要的软件环境，是提供给想运行 java 程序的用户使用的。&lt;br&gt;
