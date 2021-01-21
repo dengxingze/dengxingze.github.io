@@ -30,11 +30,13 @@
             <title>Java interview summary</title>
             <link>http://example.com/2021/01/17/Java%20interview%20summary/</link>
             <pubDate>Sun, 17 Jan 2021 18:21:37 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;1.JRE 与 JDK&lt;br&gt;
+            <description><![CDATA[ &lt;ol&gt;
+&lt;li&gt;JRE 与 JDK&lt;br&gt;
 JRE： Java Runtime Environment&lt;br&gt;
 JDK：Java Development Kit&lt;br&gt;
 JRE 是 java 运行时环境，包含了 java 虚拟机，java 基础类库。是使用 java 语言编写的程序运行所需要的软件环境，是提供给想运行 java 程序的用户使用的。&lt;br&gt;
-JDK 是 java 开发工具包，&lt;/p&gt;
+JDK 是 java 开发工具包，&lt;/li&gt;
+&lt;/ol&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;p&gt;是程序员使用 java 语言编写 java 程序所需的开发工具包，是提供给程序员使用的。JDK 包含了 JRE，同时还包含了编译 java 源码的编译器 javac，还包含了很多 java 程序调试和分析的工具：jconsole，jvisualvm 等工具软件，还包含了 java 程序编写所需的文档和 demo 例子程序。如果你需要运行 java 程序，只需安装 JRE 就可以了。如果你需要编写 java 程序，需要安装 JDK。&lt;/p&gt;
 &lt;p&gt;2. 形参和实参&lt;br&gt;
