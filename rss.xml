@@ -1135,6 +1135,13 @@ NULL—→新建态：执行一个程序，创建一个子进程。&lt;br&gt;
 &lt;li&gt;进程进入挂起状态是由于操作系统、父进程或进程本身阻止它的运行。&lt;/li&gt;
 &lt;li&gt;结束进程挂起状态的命令只能通过操作系统或父进程发出。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;加密算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#加密算法&#34;&gt;#&lt;/a&gt; 加密算法&lt;/h2&gt;
+&lt;p&gt;BASE64 严格地说，属于编码格式，而非加密算法&lt;br&gt;
+ MD5 (Message Digest algorithm 5，信息摘要算法)&lt;br&gt;
+ SHA (Secure Hash Algorithm，安全散列算法)&lt;br&gt;
+ HMAC (Hash Message Authentication Code，散列消息鉴别码)&lt;/p&gt;
+&lt;h3 id=&#34;base64&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#base64&#34;&gt;#&lt;/a&gt; BASE64&lt;/h3&gt;
+&lt;p&gt;Base64 是网络上最常见的用于传输 8Bit=1 字节代码的编码方式之一&lt;/p&gt;
  ]]></description>
         </item>
         <item>
