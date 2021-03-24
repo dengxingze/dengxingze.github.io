@@ -100,12 +100,12 @@ Dengxingze's blog = DXZ</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="http://pic1.bbzhi.com/chahuabizhi/weilaikeji-diannaocgshejibizhi/cartoon_future_tech_background_5300_9.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="http://pic3.bbzhi.com/xitongbizhi/huanxiangxingqiukuanpinggaoqingbi/computer_kuan_263545_9.jpg"></li>
+          <li class="item" data-background-image="http://pic4.bbzhi.com/fengjingbizhi/lidaogaoqingkuanpingfengguangbizhi/lidaogaoqingkuanpingfengguangbizhi_353009_9.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
         </ul>
       </div>
     </header>
@@ -160,6 +160,22 @@ Dengxingze's blog = DXZ</title>
 第二范式（2NF）要求实体的属性完全依赖于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。简而言之，第二范式就是属性完全依赖于主键。</p>
 <p>第三范式（3NF）<br>
 　　满足第三范式（3NF）必须先满足第二范式（2NF）。简而言之，第三范式（3NF）要求一个数据库表中不包含已在其它表中已包含的非主关键字信息。例如，存在一个部门信息表，其中每个部门有部门编号（dept_id）、部门名称、部门简介等信息。那么在的员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息再加入员工信息表中。如果不存在部门信息表，则根据第三范式（3NF）也应该构建它，否则就会有大量的数据冗余。简而言之，第三范式就是属性不依赖于其它非主属性。 也就是说， 如果存在非主属性对于码的传递函数依赖，则不符合 3NF 的要求。</p>
+<p>选择数据库<br>
+ mysql -D 库名 -u root -p</p>
+<p>创建数据库表<br>
+ create table + 表名</p>
+<p>插入数据<br>
+ insert into students values (NULL,“王刚”,“男”,20,“12345678”);</p>
+<p>查询数据<br>
+ select name,age from students;<br>
+select * from students;<br>
+select * from students where sex=“女”;</p>
+<p>修改数据<br>
+ update students set tel = 123 where id = 2;<br>
+update students set id = 1 where id = 1;<br>
+update students set id = 1 where id = 2;</p>
+<p>删除数据：<br>
+delete from students where id=1;</p>
 
   </div>
 
@@ -171,7 +187,7 @@ Dengxingze's blog = DXZ</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2021-01-21 21:54:25" itemprop="dateModified" datetime="2021-01-21T21:54:25+08:00">2021-01-21</time>
+    <time title="Modified: 2021-03-24 16:05:36" itemprop="dateModified" datetime="2021-03-24T16:05:36+08:00">2021-03-24</time>
   </span>
 </div>
 
@@ -221,7 +237,7 @@ Dengxingze's blog = DXZ</title>
     <div class="item left">
       
 
-  <a href="/2021/01/17/Java%20interview%20summary/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh3brzpj20zk0m8ann.jpg" title="Java interview summary">
+  <a href="/2021/01/17/Java%20interview%20summary/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4fomxoj20zk0m8axp.jpg" title="Java interview summary">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Java interview summary</h3>
@@ -231,7 +247,7 @@ Dengxingze's blog = DXZ</title>
     <div class="item right">
       
 
-  <a href="/2021/01/21/Linux%20interview%20summary/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="Linux interview summary">
+  <a href="/2021/01/21/Linux%20interview%20summary/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giph4fomxoj20zk0m8axp.jpg" title="Linux interview summary">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Linux interview summary</h3>
@@ -326,7 +342,7 @@ Dengxingze's blog = DXZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/20/SQL%20interview%20summary/" title="SQL interview summary">SQL interview summary</a></span>
+    <span><a href="/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="HTML+CSS+JS interview summary">HTML+CSS+JS interview summary</a></span>
   </li>
 
       
@@ -344,15 +360,6 @@ Dengxingze's blog = DXZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/17/Java%20interview%20summary/" title="Java interview summary">Java interview summary</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/01/21/Linux%20interview%20summary/" title="Linux interview summary">Linux interview summary</a></span>
   </li>
 
@@ -362,7 +369,16 @@ Dengxingze's blog = DXZ</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/21/HTML+CSS+JS%20interview%20summary/" title="HTML+CSS+JS interview summary">HTML+CSS+JS interview summary</a></span>
+    <span><a href="/2021/01/20/SQL%20interview%20summary/" title="SQL interview summary">SQL interview summary</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/17/Java%20interview%20summary/" title="Java interview summary">Java interview summary</a></span>
   </li>
 
   </ul>

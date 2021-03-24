@@ -769,6 +769,22 @@ zcat [gzip] (1) – compress or expand files&lt;/p&gt;
 第二范式（2NF）要求实体的属性完全依赖于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的惟一标识。简而言之，第二范式就是属性完全依赖于主键。&lt;/p&gt;
 &lt;p&gt;第三范式（3NF）&lt;br&gt;
 　　满足第三范式（3NF）必须先满足第二范式（2NF）。简而言之，第三范式（3NF）要求一个数据库表中不包含已在其它表中已包含的非主关键字信息。例如，存在一个部门信息表，其中每个部门有部门编号（dept_id）、部门名称、部门简介等信息。那么在的员工信息表中列出部门编号后就不能再将部门名称、部门简介等与部门有关的信息再加入员工信息表中。如果不存在部门信息表，则根据第三范式（3NF）也应该构建它，否则就会有大量的数据冗余。简而言之，第三范式就是属性不依赖于其它非主属性。 也就是说， 如果存在非主属性对于码的传递函数依赖，则不符合 3NF 的要求。&lt;/p&gt;
+&lt;p&gt;选择数据库&lt;br&gt;
+ mysql -D 库名 -u root -p&lt;/p&gt;
+&lt;p&gt;创建数据库表&lt;br&gt;
+ create table + 表名&lt;/p&gt;
+&lt;p&gt;插入数据&lt;br&gt;
+ insert into students values (NULL,“王刚”,“男”,20,“12345678”);&lt;/p&gt;
+&lt;p&gt;查询数据&lt;br&gt;
+ select name,age from students;&lt;br&gt;
+select * from students;&lt;br&gt;
+select * from students where sex=“女”;&lt;/p&gt;
+&lt;p&gt;修改数据&lt;br&gt;
+ update students set tel = 123 where id = 2;&lt;br&gt;
+update students set id = 1 where id = 1;&lt;br&gt;
+update students set id = 1 where id = 2;&lt;/p&gt;
+&lt;p&gt;删除数据：&lt;br&gt;
+delete from students where id=1;&lt;/p&gt;
 </content>
         <updated>2021-01-20T07:50:35.342Z</updated>
     </entry>
